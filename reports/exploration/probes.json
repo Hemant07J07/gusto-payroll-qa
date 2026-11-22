@@ -1,0 +1,780 @@
+[
+  {
+    "id": "W-01",
+    "area": "Wage",
+    "title": "normal decimal wage",
+    "input": "20.50",
+    "expected": "accepted as 20.5 (or rejected)",
+    "observed": "accepted as '20.50'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "W-02",
+    "area": "Wage",
+    "title": "federal minimum wage (boundary)",
+    "input": "7.25",
+    "expected": "accepted as 7.25 (or rejected)",
+    "observed": "accepted as '7.25'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "W-03",
+    "area": "Wage",
+    "title": "1 cent per hour (below federal minimum $7.25)",
+    "input": "0.01",
+    "expected": "accepted as 0.01 (or rejected)",
+    "observed": "accepted as '0.01'; no warning that it is below the $7.25 federal minimum",
+    "verdict": "OBS",
+    "files": [
+      "W-03.png"
+    ],
+    "field": "rate"
+  },
+  {
+    "id": "W-04",
+    "area": "Wage",
+    "title": "leading dollar sign",
+    "input": "$20",
+    "expected": "accepted as 20 (or rejected)",
+    "observed": "accepted as '20.00'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "W-05",
+    "area": "Wage",
+    "title": "surrounding spaces",
+    "input": " 20 ",
+    "expected": "accepted as 20 (or rejected)",
+    "observed": "accepted as '20.00'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "W-06",
+    "area": "Wage",
+    "title": "thousands separator",
+    "input": "1,000",
+    "expected": "accepted as 1000 (or rejected)",
+    "observed": "accepted as '1,000.00'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "W-07",
+    "area": "Wage",
+    "title": "scientific notation 1e2",
+    "input": "1e2",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '100.00'",
+    "verdict": "ISSUE",
+    "files": [
+      "W-07.png"
+    ],
+    "field": "rate"
+  },
+  {
+    "id": "W-08",
+    "area": "Wage",
+    "title": "trailing letters",
+    "input": "20abc",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Work more than 8 hours a workday or more than 40 hours per workweek. / Please enter a posi'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "W-09",
+    "area": "Wage",
+    "title": "full-width digits",
+    "input": "\uff12\uff10",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Work more than 8 hours a workday or more than 40 hours per workweek. / Please enter a posi'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "W-10",
+    "area": "Wage",
+    "title": "three decimals (should reject or say it rounds)",
+    "input": "20.999",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '21.00'",
+    "verdict": "OBS",
+    "files": [
+      "W-10.png"
+    ],
+    "field": "rate"
+  },
+  {
+    "id": "W-11",
+    "area": "Wage",
+    "title": "absurd but finite wage $999,999,999/h",
+    "input": "999999999",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '999,999,999.00'",
+    "verdict": "OBS",
+    "files": [
+      "W-11.png"
+    ],
+    "field": "rate"
+  },
+  {
+    "id": "W-12",
+    "area": "Wage",
+    "title": "negative zero",
+    "input": "-0",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Work more than 8 hours a workday or more than 40 hours per workweek. / Please enter a posi'",
+    "verdict": "OK",
+    "files": [],
+    "field": "rate"
+  },
+  {
+    "id": "H-01",
+    "area": "Hours",
+    "title": "fractional hours",
+    "input": "40.5",
+    "expected": "accepted as 40.5 (or rejected)",
+    "observed": "accepted as '40.5'",
+    "verdict": "OK",
+    "files": [],
+    "field": "hours"
+  },
+  {
+    "id": "H-02",
+    "area": "Hours",
+    "title": "every hour of the week (boundary)",
+    "input": "168",
+    "expected": "accepted as 168 (or rejected)",
+    "observed": "accepted as '168'",
+    "verdict": "OK",
+    "files": [],
+    "field": "hours"
+  },
+  {
+    "id": "H-03",
+    "area": "Hours",
+    "title": "scientific notation hours",
+    "input": "1e3",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '1,000'",
+    "verdict": "ISSUE",
+    "files": [
+      "H-03.png"
+    ],
+    "field": "hours"
+  },
+  {
+    "id": "H-04",
+    "area": "Hours",
+    "title": "Biweekly: 337 h exceeds the hours in the period",
+    "input": "337",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '337'",
+    "verdict": "ISSUE",
+    "files": [
+      "H-04.png"
+    ],
+    "field": "hours"
+  },
+  {
+    "id": "H-05",
+    "area": "Hours",
+    "title": "Monthly: 745 h exceeds the hours in the period",
+    "input": "745",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '745'",
+    "verdict": "ISSUE",
+    "files": [
+      "H-05.png"
+    ],
+    "field": "hours"
+  },
+  {
+    "id": "H-06",
+    "area": "Hours",
+    "title": "Semimonthly: 400 h exceeds the hours in the period",
+    "input": "400",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '400'",
+    "verdict": "ISSUE",
+    "files": [
+      "H-06.png"
+    ],
+    "field": "hours"
+  },
+  {
+    "id": "O-01",
+    "area": "Overtime",
+    "title": "negative overtime hours",
+    "input": "-5",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'A pay period is the amount of time between paydays. / Please enter a positive number.'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ot_hours"
+  },
+  {
+    "id": "O-02",
+    "area": "Overtime",
+    "title": "200 overtime h on top of 40 regular h in one week",
+    "input": "200",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '200'",
+    "verdict": "ISSUE",
+    "files": [
+      "O-02.png"
+    ],
+    "field": "ot_hours"
+  },
+  {
+    "id": "O-03",
+    "area": "Overtime",
+    "title": "overtime rate $0",
+    "input": "0",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Overtime is a higher hourly wage. Overtime applies when nonexempt employees work more than'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ot_rate"
+  },
+  {
+    "id": "O-04",
+    "area": "Overtime",
+    "title": "overtime at exactly 1.5x (positive)",
+    "input": "30",
+    "expected": "accepted as 30 (or rejected)",
+    "observed": "accepted as '30.00'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ot_rate"
+  },
+  {
+    "id": "D-01",
+    "area": "Deduction",
+    "title": "negative fixed deduction (would ADD money)",
+    "input": "-100",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the exact dollar amount that your employee contributes each pay period toward'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ded_amount"
+  },
+  {
+    "id": "D-02",
+    "area": "Deduction",
+    "title": "normal fixed deduction (positive)",
+    "input": "50",
+    "expected": "accepted as 50 (or rejected)",
+    "observed": "accepted as '50.00'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ded_amount"
+  },
+  {
+    "id": "D-03",
+    "area": "Deduction",
+    "title": "99 % (integer boundary below 100)",
+    "input": "99",
+    "expected": "accepted as 99 (or rejected)",
+    "observed": "accepted as '99'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ded_amount"
+  },
+  {
+    "id": "D-04",
+    "area": "Deduction",
+    "title": "100 % deduction",
+    "input": "100",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the percent (0 to 100) of your employee\u2019s gross pay contributed to that benef'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ded_amount"
+  },
+  {
+    "id": "D-05",
+    "area": "Deduction",
+    "title": "negative percentage",
+    "input": "-5",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the percent (0 to 100) of your employee\u2019s gross pay contributed to that benef'",
+    "verdict": "OK",
+    "files": [],
+    "field": "ded_amount"
+  },
+  {
+    "id": "D-06",
+    "area": "Deduction",
+    "title": "4.5 % 401(k) - a common contribution rate",
+    "input": "4.5",
+    "expected": "accepted as 4.5 (or rejected)",
+    "observed": "accepted silently, field shows '5' (user meant 4.5)",
+    "verdict": "ISSUE",
+    "files": [
+      "D-06.png"
+    ],
+    "field": "ded_amount"
+  },
+  {
+    "id": "D-07",
+    "area": "Deduction",
+    "title": "99.99 % (decimal boundary below 100; hint says 0 to 100)",
+    "input": "99.99",
+    "expected": "accepted as 99.99 (or rejected)",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the percent (0 to 100) of your employee\u2019s gross pay contributed to that benef'; a valid reading 99.99 existed",
+    "verdict": "OK",
+    "files": [],
+    "field": "ded_amount"
+  },
+  {
+    "id": "F-01",
+    "area": "Federal W-4",
+    "title": "negative dependents amount (W-4 step 3)",
+    "input": "-2000",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Enter the results for line 3 from the W-4. / Please enter a valid number.'",
+    "verdict": "OK",
+    "files": [],
+    "field": "fed_dependents"
+  },
+  {
+    "id": "F-02",
+    "area": "Federal W-4",
+    "title": "dependents amount no W-4 could produce ($2,200 x children + $500 x others)",
+    "input": "2001",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '2,001.00'",
+    "verdict": "OBS",
+    "files": [
+      "F-02.png"
+    ],
+    "field": "fed_dependents"
+  },
+  {
+    "id": "F-03",
+    "area": "Federal W-4",
+    "title": "negative other income (4a)",
+    "input": "-5000",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Enter the results for line 4a from the W-4. / Please enter a valid number.'",
+    "verdict": "OK",
+    "files": [],
+    "field": "fed_other_income"
+  },
+  {
+    "id": "F-04",
+    "area": "Federal W-4",
+    "title": "negative extra withholding (4c)",
+    "input": "-25",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Some employees request additional withholding from their paychecks. This info is found on '",
+    "verdict": "OK",
+    "files": [],
+    "field": "fed_extra"
+  },
+  {
+    "id": "F-05",
+    "area": "Federal W-4",
+    "title": "extra withholding $5,000 on an $800 paycheck",
+    "input": "5000",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '5,000.00'",
+    "verdict": "OBS",
+    "files": [
+      "F-05.png"
+    ],
+    "field": "fed_extra"
+  },
+  {
+    "id": "S-01",
+    "area": "State W-4",
+    "title": "negative number of dependents",
+    "input": "-1",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'Choose the Alabama Number of Dependents according to form A-4, line 4. / Please enter a va'",
+    "verdict": "OK",
+    "files": [],
+    "field": "state_dependents"
+  },
+  {
+    "id": "S-02",
+    "area": "State W-4",
+    "title": "fractional number of dependents",
+    "input": "1.5",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '1.5'",
+    "verdict": "ISSUE",
+    "files": [
+      "S-02.png"
+    ],
+    "field": "state_dependents"
+  },
+  {
+    "id": "S-03",
+    "area": "State W-4",
+    "title": "1,000 dependents",
+    "input": "1000",
+    "expected": "rejected",
+    "observed": "accepted silently, field shows '1,000'",
+    "verdict": "OBS",
+    "files": [
+      "S-03.png"
+    ],
+    "field": "state_dependents"
+  },
+  {
+    "id": "S-04",
+    "area": "State W-4",
+    "title": "negative additional state withholding",
+    "input": "-50",
+    "expected": "rejected",
+    "observed": "rejected (aria-invalid=True, Calculate enabled=False); message: 'If needed, choose to withhold an additional dollar amount for state withholding tax accord'",
+    "verdict": "OK",
+    "files": [],
+    "field": "state_extra"
+  },
+  {
+    "id": "DT-01",
+    "area": "Pay date",
+    "title": "29 Feb in a leap year (positive)",
+    "input": "02/29/2028",
+    "expected": "accepted",
+    "observed": "segments 02/29/2028, stored '2028-02-29', invalid=[], Calculate enabled=True",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "DT-02",
+    "area": "Pay date",
+    "title": "30 February",
+    "input": "02/30/2026",
+    "expected": "rejected",
+    "observed": "segments 02/30/2026, stored '2026-02-30', invalid=[], Calculate enabled=False",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "DT-03",
+    "area": "Pay date",
+    "title": "month 13",
+    "input": "13/01/2026",
+    "expected": "rejected",
+    "observed": "segments 13/01/2026, stored '2026-13-01', invalid=[], Calculate enabled=False",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "DT-04",
+    "area": "Pay date",
+    "title": "year 1899",
+    "input": "01/01/1899",
+    "expected": "rejected",
+    "observed": "segments 01/01/1899, stored '1899-01-01', invalid=[], Calculate enabled=True",
+    "verdict": "ISSUE",
+    "files": [
+      "DT-04.png"
+    ]
+  },
+  {
+    "id": "DT-05",
+    "area": "Pay date",
+    "title": "year 2150",
+    "input": "01/01/2150",
+    "expected": "rejected",
+    "observed": "segments 01/01/2150, stored '2150-01-01', invalid=[], Calculate enabled=True",
+    "verdict": "ISSUE",
+    "files": [
+      "DT-05.png"
+    ]
+  },
+  {
+    "id": "HINT-01",
+    "area": "UI text",
+    "title": "helper text per field (see field_hints.json)",
+    "input": "-",
+    "expected": "each hint describes its own field",
+    "observed": "basics.hourlyPay.wage: 'Work more than 8 hours a workday or more than 40 hours per w'; basics.hourlyPay.hours: 'A pay period is the amount of time between paydays.'; basics.overtime.0.wage: 'Overtime is a higher hourly wage. Overtime applies when none'; basics.overtime.0.hours: 'A pay period is the amount of time between paydays.'; basics.checkDate: ''; basics.payFrequency: 'Your employee\u2019s pay fr",
+    "verdict": "OBS",
+    "files": []
+  },
+  {
+    "id": "A-01",
+    "area": "Accessibility",
+    "title": "controls sharing one accessible name",
+    "input": "-",
+    "expected": "unique names or a grouping legend",
+    "observed": "{\"\": [{\"name\": \"basics.checkDate\", \"group\": \"When will your employee be paid?* (MM/DD/YYYY)\"}], \"Deduction name\": [{\"name\": \"deductions.0.name\", \"group\": null}, {\"name\": \"fringe.0.name\", \"group\": null}], \"Calculation Method\": [{\"name\": \"deductions.0.calculationMethod\", \"group\": null}, {\"name\": \"fringe.0.calculationMethod\", \"group\": null}], \"Deduction amount\": [{\"name\": \"deductions.0.amount\", \"grou",
+    "verdict": "OBS",
+    "files": []
+  },
+  {
+    "id": "N-01",
+    "area": "Page health",
+    "title": "console errors / HTTP errors while using the form",
+    "input": "-",
+    "expected": "none",
+    "observed": "console errors: 0 []; HTTP>=400: []",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "DT-06",
+    "area": "Pay date",
+    "title": "calculate with pay date in 1899",
+    "input": "1899-01-15",
+    "expected": "field rejects the year with a message",
+    "observed": "HTTP 200; body '{\"grossPay\":\"0.00\",\"takeHomePay\":{\"amount\":\"0.00\",\"percentage\":0},\"taxes\":{\"amount\":\"0.00\",\"details\":[],\"percentage\":0},'; error shown ''",
+    "verdict": "ISSUE",
+    "files": [
+      "DT-06.png"
+    ]
+  },
+  {
+    "id": "DT-07",
+    "area": "Pay date",
+    "title": "calculate with pay date in 2150",
+    "input": "2150-01-15",
+    "expected": "field rejects the year with a message",
+    "observed": "HTTP 200; body '{\"grossPay\":\"800.00\",\"takeHomePay\":{\"amount\":\"652.04\",\"percentage\":81.51},\"taxes\":{\"amount\":\"86.76\",\"details\":[{\"amount\"'; error shown ''",
+    "verdict": "ISSUE",
+    "files": [
+      "DT-07.png"
+    ]
+  },
+  {
+    "id": "C-01",
+    "area": "Calculation",
+    "title": "baseline $20 x 40 h weekly, 401(k) $50",
+    "input": "AL, weekly",
+    "expected": "HTTP 200, gross 800",
+    "observed": "HTTP 200, gross $800.00, take home 76.28% $610.24",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "C-02",
+    "area": "UI",
+    "title": "result panel after changing an input",
+    "input": "wage 20 -> 30, no recalc",
+    "expected": "panel cleared or marked out of date",
+    "observed": "panel gross still $800.00; stale cue: False",
+    "verdict": "OBS",
+    "files": [
+      "C-02.png"
+    ]
+  },
+  {
+    "id": "C-03",
+    "area": "Calculation",
+    "title": "W-4 4(c) extra withholding $5,000 on $800 gross",
+    "input": "fed extra 5000",
+    "expected": "rejected, or withholding capped at available pay",
+    "observed": "HTTP 200; take home -544.91% -$4,359.28",
+    "verdict": "ISSUE",
+    "files": [
+      "C-03.png"
+    ]
+  },
+  {
+    "id": "C-04",
+    "area": "Calculation",
+    "title": "additional state withholding $2,000 on $800 gross",
+    "input": "state extra 2000",
+    "expected": "rejected, or capped",
+    "observed": "HTTP 200; take home -173.72% -$1,389.76",
+    "verdict": "ISSUE",
+    "files": [
+      "C-04.png"
+    ]
+  },
+  {
+    "id": "C-06",
+    "area": "Calculation",
+    "title": "401(k) at 4.5 % of $800 gross",
+    "input": "Percentage 4.5",
+    "expected": "pre-tax deduction $36.00",
+    "observed": "field shows '5'; HTTP 200; pre-tax 5% $40.00",
+    "verdict": "ISSUE",
+    "files": [
+      "C-06.png"
+    ]
+  },
+  {
+    "id": "C-07",
+    "area": "Calculation",
+    "title": "1.5 state dependents (Alabama A-4 line 4 is a whole number)",
+    "input": "dependents 1.5",
+    "expected": "rejected before calculating",
+    "observed": "HTTP 200; take home 76.28% $610.24; error shown: ''",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "C-05",
+    "area": "Calculation",
+    "title": "40 regular + 150 overtime hours in one week",
+    "input": "weekly 40 + OT 150",
+    "expected": "rejected (190 h > 168 h)",
+    "observed": "HTTP 200; gross $5,300.00",
+    "verdict": "ISSUE",
+    "files": [
+      "C-05.png"
+    ]
+  },
+  {
+    "id": "M-01",
+    "area": "Mobile 390 px",
+    "title": "horizontal overflow",
+    "input": "iPhone-size viewport",
+    "expected": "no horizontal scroll",
+    "observed": "scrollWidth 390 vs viewport 390; elements past the edge: []",
+    "verdict": "OK",
+    "files": [
+      "M-01_mobile_form.png"
+    ]
+  },
+  {
+    "id": "M-02",
+    "area": "Mobile 390 px",
+    "title": "touch targets smaller than 24x24 px (WCAG 2.5.8)",
+    "input": "-",
+    "expected": "none",
+    "observed": "0 small: []",
+    "verdict": "OK",
+    "files": [
+      "M-01_mobile_form.png"
+    ]
+  },
+  {
+    "id": "API-01",
+    "area": "API (server-side validation)",
+    "title": "unchanged replay (positive control)",
+    "input": "unchanged replay (positive control)",
+    "expected": "200 with the same result",
+    "observed": "HTTP 200; grossPay=800.00; takeHomePay={; body: '{\"grossPay\":\"800.00\",\"takeHomePay\":{\"amount\":\"610.24\",\"percentage\":76.28},\"taxes\":{\"amount\":\"78.56\",\"details\":[{\"amount\":\"48.08\",\"label\":\"Federal Income Tax\",\"p'",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "API-02",
+    "area": "API (server-side validation)",
+    "title": "negative wage -20 (UI rejects it)",
+    "input": "negative wage -20 (UI rejects it)",
+    "expected": "4xx validation error",
+    "observed": "HTTP 200; grossPay=-800.00; takeHomePay={; body: '{\"grossPay\":\"-800.00\",\"takeHomePay\":{\"amount\":\"-850.00\",\"percentage\":106.25},\"taxes\":{\"amount\":\"0.00\",\"details\":[],\"percentage\":-0.0},\"fica\":{\"amount\":\"0.00\",\"d'",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "API-03",
+    "area": "API (server-side validation)",
+    "title": "negative hours -40 (UI rejects it)",
+    "input": "negative hours -40 (UI rejects it)",
+    "expected": "4xx validation error",
+    "observed": "HTTP 500; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html>\\n<html style=\"height:100%;\">\\n<head>\\n  <title>500 Error - The Page is Currently not Accessible - Gusto</title>\\n  <link as=\"font\" crossorigin=\"anon'",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "API-04",
+    "area": "API (server-side validation)",
+    "title": "wage 'abc'",
+    "input": "wage 'abc'",
+    "expected": "4xx validation error",
+    "observed": "HTTP 200; grossPay=0.00; takeHomePay={; body: '{\"grossPay\":\"0.00\",\"takeHomePay\":{\"amount\":\"-50.00\",\"percentage\":0},\"taxes\":{\"amount\":\"0.00\",\"details\":[],\"percentage\":0},\"fica\":{\"amount\":\"0.00\",\"details\":[],\"'",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "API-05",
+    "area": "API (server-side validation)",
+    "title": "100,000 hours in a weekly period",
+    "input": "100,000 hours in a weekly period",
+    "expected": "4xx validation error",
+    "observed": "HTTP 500; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html>\\n<html style=\"height:100%;\">\\n<head>\\n  <title>500 Error - The Page is Currently not Accessible - Gusto</title>\\n  <link as=\"font\" crossorigin=\"anon'",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "API-06",
+    "area": "API (server-side validation)",
+    "title": "unknown pay frequency",
+    "input": "unknown pay frequency",
+    "expected": "4xx validation error",
+    "observed": "HTTP 500; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html>\\n<html style=\"height:100%;\">\\n<head>\\n  <title>500 Error - The Page is Currently not Accessible - Gusto</title>\\n  <link as=\"font\" crossorigin=\"anon'",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "API-07",
+    "area": "API (server-side validation)",
+    "title": "401(k) at 150 % (UI blocks >= 100 %)",
+    "input": "401(k) at 150 % (UI blocks >= 100 %)",
+    "expected": "4xx validation error",
+    "observed": "HTTP 200; grossPay=0.00; takeHomePay={; body: '{\"grossPay\":\"0.00\",\"takeHomePay\":{\"amount\":\"0.00\",\"percentage\":0},\"taxes\":{\"amount\":\"0.00\",\"details\":[],\"percentage\":0},\"fica\":{\"amount\":\"0.00\",\"details\":[],\"pe'",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "API-08",
+    "area": "API (server-side validation)",
+    "title": "wage field missing",
+    "input": "wage field missing",
+    "expected": "4xx validation error",
+    "observed": "HTTP 200; grossPay=0.00; takeHomePay={; body: '{\"grossPay\":\"0.00\",\"takeHomePay\":{\"amount\":\"-50.00\",\"percentage\":0},\"taxes\":{\"amount\":\"0.00\",\"details\":[],\"percentage\":0},\"fica\":{\"amount\":\"0.00\",\"details\":[],\"'",
+    "verdict": "ISSUE",
+    "files": []
+  },
+  {
+    "id": "API-09",
+    "area": "API (server-side validation)",
+    "title": "empty JSON object",
+    "input": "{}",
+    "expected": "4xx validation error",
+    "observed": "HTTP 400; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html>\\n<html style=\"height:100%;\">\\n  <head>\\n    <title>400 Error - Bad Request - Gusto</title>\\n    <link as=\"font\" crossorigin=\"anonymous\" href=\"https:'",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "API-10",
+    "area": "API (server-side validation)",
+    "title": "malformed JSON body",
+    "input": "{\"basics\":",
+    "expected": "400 Bad Request",
+    "observed": "HTTP 400; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html>\\n<html style=\"height:100%;\">\\n  <head>\\n    <title>400 Error - Bad Request - Gusto</title>\\n    <link as=\"font\" crossorigin=\"anonymous\" href=\"https:'",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "API-11",
+    "area": "API (server-side validation)",
+    "title": "unknown state in the URL",
+    "input": "unknown state in the URL",
+    "expected": "404 or 4xx",
+    "observed": "HTTP 404; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang=\"en\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"preload\" as=\"image\" '",
+    "verdict": "OK",
+    "files": []
+  },
+  {
+    "id": "AX-none",
+    "area": "Accessibility (axe-core)",
+    "title": "no WCAG A/AA violations found by axe",
+    "input": "-",
+    "expected": "-",
+    "observed": "clean",
+    "verdict": "OK",
+    "files": []
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "url": "https://gusto.com/tools/paycheck-calculator/Alabama",
+  "body": {
+    "stateTax": {
+      "filingStatus": "Single",
+      "numberOfDependents": 0,
+      "additionalWithholding": 0
+    },
+    "federalTax": {
+      "twoJobs": false,
+      "otherIncome": 0,
+      "filingStatus": "Single",
+      "extraWithholding": 0,
+      "dependentsAmount": 0,
+      "deductions": 0
+    },
+    "exemptions": [],
+    "autocomplete": {
+      "addresses": {
+        "home": "1000 Main St, Gardendale, AL 35071",
+        "work": "1000 Main St, Gardendale, AL 35071"
+      }
+    },
+    "stateName": "Alabama",
+    "addresses": {
+      "home": {
+        "city": "Gardendale",
+        "state": "AL",
+        "street1": "1000 Main St",
+        "street2": "",
+        "zip": "35071"
+      },
+      "work": {
+        "city": "Gardendale",
+        "state": "AL",
+        "street1": "1000 Main St",
+        "street2": "",
+        "zip": "35071"
+      }
+    },
+    "basics": {
+      "checkDate": "2026-11-22",
+      "employeeType": "hourly",
+      "hourlyWages": [
+        {
+          "hours": 40,
+          "wage": 20
+        }
+      ],
+      "payFrequency": "Weekly",
+      "regularPay": 0
+    },
+    "deductions": [
+      {
+        "amount": 50,
+        "calculationMethod": "FixedAmount",
+        "name": "Retirement401k"
+      }
+    ],
+    "fringe": []
+  }
+}

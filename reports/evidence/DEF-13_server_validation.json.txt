@@ -1,0 +1,78 @@
+{
+  "endpoint": "https://gusto.com/tools/paycheck-calculator/Alabama",
+  "baseline_request": {
+    "stateTax": {
+      "filingStatus": "Single",
+      "numberOfDependents": 0,
+      "additionalWithholding": 0
+    },
+    "federalTax": {
+      "twoJobs": false,
+      "otherIncome": 0,
+      "filingStatus": "Single",
+      "extraWithholding": 0,
+      "dependentsAmount": 0,
+      "deductions": 0
+    },
+    "exemptions": [],
+    "autocomplete": {
+      "addresses": {
+        "home": "1000 Main St, Gardendale, AL 35071",
+        "work": "1000 Main St, Gardendale, AL 35071"
+      }
+    },
+    "stateName": "Alabama",
+    "addresses": {
+      "home": {
+        "city": "Gardendale",
+        "state": "AL",
+        "street1": "1000 Main St",
+        "street2": "",
+        "zip": "35071"
+      },
+      "work": {
+        "city": "Gardendale",
+        "state": "AL",
+        "street1": "1000 Main St",
+        "street2": "",
+        "zip": "35071"
+      }
+    },
+    "basics": {
+      "checkDate": "2026-11-22",
+      "employeeType": "hourly",
+      "hourlyWages": [
+        {
+          "hours": 40,
+          "wage": 20
+        }
+      ],
+      "payFrequency": "Weekly",
+      "regularPay": 0
+    },
+    "deductions": [],
+    "fringe": []
+  },
+  "probes": [
+    {
+      "probe": "negative wage -20",
+      "status": 200,
+      "summary": "{\"grossPay\":\"-800.00\",\"takeHomePay\":{\"amount\":\"-800.00\",\"percentage\":100.0},\"taxes\":{\"amount\":\"0.00\",\"details\""
+    },
+    {
+      "probe": "wage 'abc'",
+      "status": 200,
+      "summary": "{\"grossPay\":\"0.00\",\"takeHomePay\":{\"amount\":\"0.00\",\"percentage\":0},\"taxes\":{\"amount\":\"0.00\",\"details\":[],\"perce"
+    },
+    {
+      "probe": "negative hours -40",
+      "status": 500,
+      "summary": "500 Error - The Page is Currently not Accessible - Gusto"
+    },
+    {
+      "probe": "unknown pay frequency 'Fortnightly'",
+      "status": 500,
+      "summary": "500 Error - The Page is Currently not Accessible - Gusto"
+    }
+  ]
+}

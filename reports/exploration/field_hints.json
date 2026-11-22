@@ -1,0 +1,110 @@
+[
+ [
+  "stateName",
+  ""
+ ],
+ [
+  "basics.hourlyPay.wage",
+  "Work more than 8 hours a workday or more than 40 hours per workweek."
+ ],
+ [
+  "basics.hourlyPay.hours",
+  "A pay period is the amount of time between paydays."
+ ],
+ [
+  "basics.overtime.0.wage",
+  "Overtime is a higher hourly wage. Overtime applies when nonexempt employees work more than 8 hours a workday or more tha"
+ ],
+ [
+  "basics.overtime.0.hours",
+  "A pay period is the amount of time between paydays."
+ ],
+ [
+  "basics.checkDate",
+  ""
+ ],
+ [
+  "basics.payFrequency",
+  "Your employee\u2019s pay frequency is how often they are paid. Pay schedule\u2014how frequently they are paid\u2014can impact your stat"
+ ],
+ [
+  "federalTax.filingStatus",
+  "You can find your employee's federal filing status on their W-4. Their filing status can affect how much money is withhe"
+ ],
+ [
+  "federalTax.twoJobs",
+  ""
+ ],
+ [
+  "federalTax.dependentsAmount",
+  "Enter the results for line 3 from the W-4."
+ ],
+ [
+  "federalTax.otherIncome",
+  "Enter the results for line 4a from the W-4."
+ ],
+ [
+  "federalTax.deductions",
+  "Enter the results for line 4b from the W-4."
+ ],
+ [
+  "federalTax.extraWithholding",
+  "Some employees request additional withholding from their paychecks. This info is found on line 4c of their W-4."
+ ],
+ [
+  "stateTax.filingStatus",
+  "Choose the Alabama Filing Status according to form A-4, lines 1, 2, 3."
+ ],
+ [
+  "stateTax.numberOfDependents",
+  "Choose the Alabama Number of Dependents according to form A-4, line 4."
+ ],
+ [
+  "stateTax.additionalWithholding",
+  "If needed, choose to withhold an additional dollar amount for state withholding tax according to form A-4, line 5."
+ ],
+ [
+  "deductions.0.name",
+  ""
+ ],
+ [
+  "deductions.0.calculationMethod",
+  "Please select a calculation method for each type of benefit your employee uses."
+ ],
+ [
+  "deductions.0.amount",
+  "Please enter the exact dollar amount that your employee contributes each pay period towards that benefit in the \u201cDeducti"
+ ],
+ [
+  "fringe.0.name",
+  ""
+ ],
+ [
+  "fringe.0.calculationMethod",
+  "Please select a calculation method for each type of benefit your employee uses."
+ ],
+ [
+  "fringe.0.amount",
+  "Please enter the exact dollar amount that your employee contributes each pay period towards that benefit in the \u201cDeducti"
+ ],
+ [
+  "exemptions",
+  ""
+ ],
+ [
+  "exemptions",
+  ""
+ ],
+ [
+  "exemptions",
+  ""
+ ],
+ [
+  "exemptions",
+  ""
+ ],
+ [
+  "exemptions",
+  ""
+ ]
+]

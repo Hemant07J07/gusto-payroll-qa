@@ -1,0 +1,88 @@
+=== MOCK_BUG=neg
+FAILED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]
+FAILED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]
+FAILED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]
+FAILED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]
+4 failed, 34 passed in 61.92s (0:01:01)
+=== MOCK_BUG=fica
+FAILED tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]
+FAILED tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]
+3 failed, 35 passed in 54.61s
+=== MOCK_BUG=otdrop
+FAILED tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]
+1 failed, 37 passed in 55.43s
+=== MOCK_BUG=negnet
+ERROR    playwright:connection.py:292 Error occurred in event listener
+FAILED tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]
+FAILED tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]
+FAILED tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]
+3 failed, 35 passed in 87.67s (0:01:27)
+=== MOCK_BUG=big
+ERROR    playwright:connection.py:292 Error occurred in event listener
+FAILED tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]
+1 failed, 37 passed in 85.53s (0:01:25)
+=== MOCK_BUG=silent0
+>       assert after != before or not shows_zero, "request failed, but the page shows 'Take home pay $0.00' and no error"
+E       AssertionError: request failed, but the page shows 'Take home pay $0.00' and no error
+FAILED tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]
+1 failed, 37 passed in 55.32s
+=== MOCK_BUG=hours168
+FAILED tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]
+FAILED tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]
+2 failed, 36 passed in 60.40s (0:01:00)
+=== MOCK_BUG=comma
+FAILED tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]
+1 failed, 37 passed in 56.72s
+=== MOCK_BUG=otlow
+FAILED tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]
+1 failed, 37 passed in 56.75s
+=== MOCK_BUG=helper
+FAILED tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]
+1 failed, 37 passed in 54.99s
+=== MOCK_BUG=datehint
+FAILED tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]
+FAILED tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]
+2 failed, 36 passed in 55.25s
+=== MOCK_BUG=cookiewipe
+FAILED tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]
+1 failed, 37 passed in 55.08s
+=== MOCK_BUG=display
+FAILED tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]
+FAILED tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]
+11 failed, 27 passed in 54.96s
+=== MOCK_BUG=xss
+        """onerror/onload handlers fire asynchronously (after the failed image request), so give them time.
+        """onerror/onload handlers fire asynchronously (after the failed image request), so give them time.
+FAILED tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]
+FAILED tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]
+2 failed, 36 passed in 55.77s
+=== MOCK_BUG=err500
+FAILED tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]
+FAILED tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]
+FAILED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]
+FAILED tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]
+FAILED tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]
+FAILED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]
+FAILED tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]
+FAILED tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]
+FAILED tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]
+17 failed, 21 passed in 48.90s
+DONE

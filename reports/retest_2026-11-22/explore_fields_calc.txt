@@ -1,0 +1,56 @@
+[OK   ] W-01 normal decimal wage | in='20.50' | accepted as '20.50'
+[OK   ] W-02 federal minimum wage (boundary) | in='7.25' | accepted as '7.25'
+[OBS  ] W-03 1 cent per hour (below federal minimum $7.25) | in='0.01' | accepted as '0.01'; no warning that it is below the $7.25 federal minimum
+[OK   ] W-04 leading dollar sign | in='$20' | accepted as '20.00'
+[OK   ] W-05 surrounding spaces | in=' 20 ' | accepted as '20.00'
+[OK   ] W-06 thousands separator | in='1,000' | accepted as '1,000.00'
+[ISSUE] W-07 scientific notation 1e2 | in='1e2' | accepted silently, field shows '100.00'
+[OK   ] W-08 trailing letters | in='20abc' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Work more than 8 hours a workday or more than 40 hours per workweek. / Please enter a posi'
+[OK   ] W-09 full-width digits | in='２０' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Work more than 8 hours a workday or more than 40 hours per workweek. / Please enter a posi'
+[OBS  ] W-10 three decimals (should reject or say it rounds) | in='20.999' | accepted silently, field shows '21.00'
+[OBS  ] W-11 absurd but finite wage $999,999,999/h | in='999999999' | accepted silently, field shows '999,999,999.00'
+[OK   ] W-12 negative zero | in='-0' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Work more than 8 hours a workday or more than 40 hours per workweek. / Please enter a posi'
+[OK   ] H-01 fractional hours | in='40.5' | accepted as '40.5'
+[OK   ] H-02 every hour of the week (boundary) | in='168' | accepted as '168'
+[ISSUE] H-03 scientific notation hours | in='1e3' | accepted silently, field shows '1,000'
+[ISSUE] H-04 Biweekly: 337 h exceeds the hours in the period | in='337' | accepted silently, field shows '337'
+[ISSUE] H-05 Monthly: 745 h exceeds the hours in the period | in='745' | accepted silently, field shows '745'
+[ISSUE] H-06 Semimonthly: 400 h exceeds the hours in the period | in='400' | accepted silently, field shows '400'
+[OK   ] O-01 negative overtime hours | in='-5' | rejected (aria-invalid=True, Calculate enabled=False); message: 'A pay period is the amount of time between paydays. / Please enter a positive number.'
+[ISSUE] O-02 200 overtime h on top of 40 regular h in one week | in='200' | accepted silently, field shows '200'
+[OK   ] O-03 overtime rate $0 | in='0' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Overtime is a higher hourly wage. Overtime applies when nonexempt employees work more than'
+[OK   ] O-04 overtime at exactly 1.5x (positive) | in='30' | accepted as '30.00'
+[OK   ] D-01 negative fixed deduction (would ADD money) | in='-100' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the exact dollar amount that your employee contributes each pay period toward'
+[OK   ] D-02 normal fixed deduction (positive) | in='50' | accepted as '50.00'
+[OK   ] D-03 99 % (integer boundary below 100) | in='99' | accepted as '99'
+[OK   ] D-04 100 % deduction | in='100' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the percent (0 to 100) of your employee’s gross pay contributed to that benef'
+[OK   ] D-05 negative percentage | in='-5' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the percent (0 to 100) of your employee’s gross pay contributed to that benef'
+[ISSUE] D-06 4.5 % 401(k) - a common contribution rate | in='4.5' | accepted silently, field shows '5' (user meant 4.5)
+[OK   ] D-07 99.99 % (decimal boundary below 100; hint says 0 to 100) | in='99.99' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Please enter the percent (0 to 100) of your employee’s gross pay contributed to that benef'; a valid reading 99.99 existed
+[OK   ] F-01 negative dependents amount (W-4 step 3) | in='-2000' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Enter the results for line 3 from the W-4. / Please enter a valid number.'
+[OBS  ] F-02 dependents amount no W-4 could produce ($2,200 x children + $500 x others) | in='2001' | accepted silently, field shows '2,001.00'
+[OK   ] F-03 negative other income (4a) | in='-5000' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Enter the results for line 4a from the W-4. / Please enter a valid number.'
+[OK   ] F-04 negative extra withholding (4c) | in='-25' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Some employees request additional withholding from their paychecks. This info is found on '
+[OBS  ] F-05 extra withholding $5,000 on an $800 paycheck | in='5000' | accepted silently, field shows '5,000.00'
+[OK   ] S-01 negative number of dependents | in='-1' | rejected (aria-invalid=True, Calculate enabled=False); message: 'Choose the Alabama Number of Dependents according to form A-4, line 4. / Please enter a va'
+[ISSUE] S-02 fractional number of dependents | in='1.5' | accepted silently, field shows '1.5'
+[OBS  ] S-03 1,000 dependents | in='1000' | accepted silently, field shows '1,000'
+[OK   ] S-04 negative additional state withholding | in='-50' | rejected (aria-invalid=True, Calculate enabled=False); message: 'If needed, choose to withhold an additional dollar amount for state withholding tax accord'
+[OK   ] DT-01 29 Feb in a leap year (positive) | in='02/29/2028' | segments 02/29/2028, stored '2028-02-29', invalid=[], Calculate enabled=True
+[OK   ] DT-02 30 February | in='02/30/2026' | segments 02/30/2026, stored '2026-02-30', invalid=[], Calculate enabled=False
+[OK   ] DT-03 month 13 | in='13/01/2026' | segments 13/01/2026, stored '2026-13-01', invalid=[], Calculate enabled=False
+[ISSUE] DT-04 year 1899 | in='01/01/1899' | segments 01/01/1899, stored '1899-01-01', invalid=[], Calculate enabled=True
+[ISSUE] DT-05 year 2150 | in='01/01/2150' | segments 01/01/2150, stored '2150-01-01', invalid=[], Calculate enabled=True
+[OBS  ] HINT-01 helper text per field (see field_hints.json) | in='-' | basics.hourlyPay.wage: 'Work more than 8 hours a workday or more than 40 hours per w'; basics.hourlyPay.hours: 'A pay period is the amount of time between paydays.'; basics.overtime.0.wage: 'Overtime is a higher hourly wage. Overtime applies when none'; basics.overtime.0.hours: 'A pay period is the amount of time between paydays.'; basics.checkDate: ''; basics.payFrequency: 'Your employee’s pay fr
+[OBS  ] A-01 controls sharing one accessible name | in='-' | {"": [{"name": "basics.checkDate", "group": "When will your employee be paid?* (MM/DD/YYYY)"}], "Deduction name": [{"name": "deductions.0.name", "group": null}, {"name": "fringe.0.name", "group": null}], "Calculation Method": [{"name": "deductions.0.calculationMethod", "group": null}, {"name": "fringe.0.calculationMethod", "group": null}], "Deduction amount": [{"name": "deductions.0.amount", "grou
+[OK   ] N-01 console errors / HTTP errors while using the form | in='-' | console errors: 0 []; HTTP>=400: []
+[OK   ] C-01 baseline $20 x 40 h weekly, 401(k) $50 | in='AL, weekly' | HTTP 200, gross $800.00, take home 76.28% $610.24
+[OBS  ] C-02 result panel after changing an input | in='wage 20 -> 30, no recalc' | panel gross still $800.00; stale cue: False
+[ISSUE] C-03 W-4 4(c) extra withholding $5,000 on $800 gross | in='fed extra 5000' | HTTP 200; take home -544.91% -$4,359.28
+[ISSUE] C-04 additional state withholding $2,000 on $800 gross | in='state extra 2000' | HTTP 200; take home -173.72% -$1,389.76
+[ISSUE] C-06 401(k) at 4.5 % of $800 gross | in='Percentage 4.5' | field shows '5'; HTTP 200; pre-tax 5% $40.00
+[ISSUE] C-07 1.5 state dependents (Alabama A-4 line 4 is a whole number) | in='dependents 1.5' | HTTP 200; take home 76.28% $610.24; error shown: ''
+[ISSUE] C-05 40 regular + 150 overtime hours in one week | in='weekly 40 + OT 150' | HTTP 200; gross $5,300.00
+
+ Counter({'OK': 29, 'ISSUE': 15, 'OBS': 9}) -> /Users/hemant/Downloads/gusto-qa/reports/exploration
+exit 0

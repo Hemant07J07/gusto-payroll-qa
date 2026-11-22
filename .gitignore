@@ -1,0 +1,11 @@
+.auth/
+__pycache__/
+.pytest_cache/
+report.html
+assets/
+.env
+.venv/
+venv/
+.DS_Store
+*.pyc
+reports/**/_raw/

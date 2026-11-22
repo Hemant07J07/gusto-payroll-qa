@@ -1,0 +1,178 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Mock hourly paycheck calculator (framework self-test only)</title>
+<style>body{font-family:sans-serif;margin:0}header{position:sticky;top:0;height:80px;background:#eee}main{display:flex;gap:40px;padding:20px}
+form{width:600px}label{display:block;margin-top:14px}input,select{width:100%;padding:6px}[role=listbox]{border:1px solid #999;list-style:none;padding:0;margin:0}
+[role=option]{padding:6px;cursor:pointer}.panel{width:380px;position:sticky;top:100px;align-self:flex-start}#cookie{position:fixed;bottom:0;left:0;right:0;background:#ffd;padding:10px}</style></head>
+<body><header>Mock header (sticky, like gusto.com)</header>
+<!-- Structure mirrors the live page as calibrated on 2026-11-21: same name= attributes, required fields, a
+     Calculate button disabled until valid, an address combobox, a cookie banner that reloads the page, and a
+     server round-trip to /tools/paycheck-calculator/<State>. BUG switches seed one bug class each. -->
+<main>
+<form novalidate onsubmit="return false">
+  <h2>Hourly paycheck calculator (MOCK)</h2>
+  <label for="stateName">Where does your business operate?</label>
+  <select id="stateName" name="stateName"><option>Alabama</option><option>Texas</option></select>
+
+  <label for="wage">What is your employee's hourly wage?*</label><small id="wage-help"></small>
+  <input id="wage" name="basics.hourlyPay.wage" aria-describedby="wage-help wage-err"><small id="wage-err"></small>
+  <div id="echo"></div>
+  <label for="hours">How many regular hours did your employee work during this pay period?*</label><small id="hours-help">A pay period is the amount of time between paydays.</small>
+  <input id="hours" name="basics.hourlyPay.hours" value="40" aria-describedby="hours-help hours-err"><small id="hours-err"></small>
+  <button type="button" id="addot">Add Overtime</button>
+  <div id="ot" hidden>
+    <label for="otw">What is your employee's overtime hourly wage?</label><small id="otw-help">Overtime is a higher hourly wage.</small>
+    <input id="otw" aria-describedby="otw-help otw-err"><small id="otw-err"></small>
+    <label for="oth">How many hours (if at all) did your employee work overtime?</label>
+    <input id="oth" aria-describedby="oth-err"><small id="oth-err"></small>
+  </div>
+
+  <p id="datehint">When will your employee be paid?* <span id="fmt"></span></p>
+  <div id="segs"></div><input type="hidden" name="basics.checkDate" id="checkDate" value="2026-11-20">
+
+  <label for="freq">How often does your employee get paid?*</label>
+  <select id="freq" name="basics.payFrequency"><option value="Annually">Annually</option><option value="Biweekly" selected>Bi-weekly</option>
+    <option value="Monthly">Monthly</option><option value="Semimonthly">Twice a month</option><option value="Weekly">Weekly</option></select>
+
+  <label for="a0">Home Address*</label><input id="a0" placeholder="Enter address" role="combobox" aria-controls="lb0" autocomplete="off"><ul id="lb0" role="listbox"></ul>
+  <label for="a1">Work Address*</label><input id="a1" placeholder="Enter address" role="combobox" aria-controls="lb1" autocomplete="off"><ul id="lb1" role="listbox"></ul>
+
+  <label for="fs">What's your employee's federal filing status (1c)?*</label>
+  <select id="fs" name="federalTax.filingStatus"><option>Single</option><option>Married</option></select>
+  <label for="ss">What's your employee's state filing status?*</label>
+  <select id="ss" name="stateTax.filingStatus"><option value="">Select an option</option><option>Single</option></select>
+  <label for="sd">How many dependents does your employee claim?*</label><input id="sd" name="stateTax.numberOfDependents">
+  <label for="sa">Does your employee have any additional state withholding amounts?*</label><input id="sa" name="stateTax.additionalWithholding">
+
+  <label for="dn">Deduction name</label><select id="dn" name="deductions.0.name"><option value=""></option>
+    <option>Retirement401k</option><option>Roth401k</option><option>MedicalInsurance</option><option>HsaIndividual</option></select>
+  <label for="dm">Calculation Method</label><select id="dm" name="deductions.0.calculationMethod"><option>FixedAmount</option><option>Percentage</option></select>
+  <label for="da">Deduction amount</label><input id="da" name="deductions.0.amount" aria-describedby="da-err"><small id="da-err"></small>
+
+  <p>Is your employee exempt from any of the following taxes?</p>
+  <input type="checkbox" name="exemptions" id="x1" value="Social Security"><label for="x1">Social Security</label>
+  <input type="checkbox" name="exemptions" id="x2" value="Federal Income Tax"><label for="x2">Federal Income Tax</label>
+  <input type="checkbox" name="exemptions" id="x3" value="Medicare Tax"><label for="x3">Medicare Tax</label>
+  <div style="height:600px"></div>
+</form>
+<div class="panel">
+  <div id="panel"></div>
+  <div id="alert" role="alert"></div>
+  <button type="button" id="calc" disabled>Calculate</button>
+</div>
+</main>
+<div id="cookie">We use cookies. <button id="onetrust-accept-btn-handler">Accept all cookies</button></div>
+<script>
+const BUG = "__BUG__";
+const $ = id => document.getElementById(id);
+const PER_PERIOD_MAX = {Weekly: 168, Biweekly: 336, Semimonthly: 372, Monthly: 744, Annually: 8784};
+
+// ---- cookie banner: accepting reloads the page, like gusto.com. Clean mock keeps the user's input.
+const KEEP = ["wage", "hours", "freq"];
+if (sessionStorage.consent) { $("cookie").hidden = true; }
+if (sessionStorage.saved) { const s = JSON.parse(sessionStorage.saved); KEEP.forEach(k => { if (s[k] != null) $(k).value = s[k]; }); delete sessionStorage.saved; }
+$("onetrust-accept-btn-handler").onclick = () => {
+  sessionStorage.consent = "1";
+  if (BUG !== "cookiewipe") sessionStorage.saved = JSON.stringify(Object.fromEntries(KEEP.map(k => [k, $(k).value])));
+  location.reload();
+};
+
+// ---- helper text and date segments
+$("wage-help").textContent = BUG === "helper" ? "Work more than 8 hours a workday or more than 40 hours per workweek."
+                                               : "The hourly rate before taxes.";
+const dayFirst = !/^en-US/.test(navigator.language);
+$("fmt").textContent = (BUG === "datehint" || !dayFirst) ? "(MM/DD/YYYY)" : "(DD/MM/YYYY)";
+const seg = (lab, val) => `<input aria-label="${lab}" value="${val}" size="4" onfocus="this.dataset.fresh=1"
+  onkeydown="if(this.dataset.fresh && /^\\d$/.test(event.key)){this.value='';this.dataset.fresh=''}">`;
+$("segs").innerHTML = (dayFirst ? [seg("Day (dd)", "20"), seg("Month (mm)", "11")] : [seg("Month (mm)", "11"), seg("Day (dd)", "20")]).join("")
+                      + seg("Year (yyyy)", "2026");
+$("segs").oninput = () => {
+  const v = l => document.querySelector(`[aria-label='${l}']`).value;
+  $("checkDate").value = `${v("Year (yyyy)")}-${v("Month (mm)").padStart(2, "0")}-${v("Day (dd)").padStart(2, "0")}`;
+  validate();
+};
+
+// ---- address combobox
+[0, 1].forEach(i => {
+  const box = $("a" + i), lb = $("lb" + i);
+  box.oninput = () => {
+    lb.innerHTML = box.value.length < 3 ? "" : ["1000 Main St, Gardendale, AL 35071", "1000 Main St N, Warrior, AL 35180"]
+      .map(a => `<li role="option">${a}</li>`).join("");
+    box.dataset.ok = "";
+    validate();
+  };
+  lb.onclick = e => { if (e.target.getAttribute("role") === "option") { box.value = e.target.textContent; box.dataset.ok = "1"; lb.innerHTML = ""; validate(); } };
+});
+$("addot").onclick = () => { $("ot").hidden = false; $("otw").name = "basics.overtime.0.wage"; $("oth").name = "basics.overtime.0.hours"; validate(); };
+
+// ---- validation
+function num(raw) {
+  raw = String(raw).trim();
+  if (BUG === "comma") raw = raw.replace(/,/g, "");
+  if (!/^-?\d+(\.\d+)?(e[+-]?\d+)?$/i.test(raw)) return NaN;
+  return Number(raw);
+}
+function setErr(el, msg) {
+  if (msg) el.setAttribute("aria-invalid", "true"); else el.removeAttribute("aria-invalid");
+  const e = $(el.id + "-err"); if (e) e.textContent = msg || "";
+  return !msg;
+}
+function positive(el, max) {
+  if (el.value === "") return setErr(el, "Required");
+  const v = num(el.value);
+  if (Number.isNaN(v)) return setErr(el, "Please enter a number.");
+  if (BUG !== "neg" && v <= 0) return setErr(el, "Please enter a positive number.");
+  if (max && v > max) return setErr(el, `Please enter a value of at most ${max}.`);
+  return setErr(el, "");
+}
+function validate() {
+  if (BUG === "xss") $("echo").innerHTML = $("wage").value;
+  let ok = positive($("wage"), BUG === "big" ? 0 : 100000);
+  ok = positive($("hours"), BUG === "hours168" ? 0 : PER_PERIOD_MAX[$("freq").value]) && ok;
+  if (!$("ot").hidden) {
+    ok = positive($("oth")) && ok;
+    let otOk = positive($("otw"));
+    if (otOk && BUG !== "otlow" && num($("otw").value) < 1.5 * num($("wage").value))
+      otOk = setErr($("otw"), "Overtime must be at least 1.5x the regular rate.");
+    ok = otOk && ok;
+  }
+  const da = $("da");
+  if ($("dn").value && da.value !== "") {
+    const v = num(da.value), gross = num($("wage").value) * num($("hours").value);
+    let msg = Number.isNaN(v) || v < 0 ? "Please enter a positive number." : "";
+    if (!msg && $("dm").value === "Percentage" && v >= 100) msg = "Must be less than 100%.";
+    if (!msg && $("dm").value === "FixedAmount" && BUG !== "negnet" && v > gross) msg = "Cannot exceed gross pay.";
+    ok = setErr(da, msg) && ok;
+  } else setErr(da, "");
+  ok = ok && $("a0").dataset.ok && $("a1").dataset.ok && $("ss").value && $("sd").value !== "" && $("sa").value !== "";
+  $("calc").disabled = !ok;
+}
+document.querySelector("form").addEventListener("input", validate);
+document.querySelector("form").addEventListener("change", validate);
+document.querySelector("form").addEventListener("focusout", validate);
+
+// ---- results
+const fmt = s => { const n = Number(String(s).replace(/,/g, "")); return (n < 0 ? "-$" : "$") + Math.abs(n).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2}); };
+function render(j) {
+  const rows = [["Gross pay", j.grossPay], ["Income taxes", j.taxes.amount], ["FICA taxes", j.fica.amount],
+                ["Pre-tax", j.preTax.amount], ["Post-tax", j.postTax.amount], ["Take home pay", j.takeHomePay.amount]];
+  if (BUG === "display") rows[5][1] = String(Math.floor(Number(String(rows[5][1]).replace(/,/g, ""))));
+  const ok = rows.every(r => Number.isFinite(Number(String(r[1]).replace(/,/g, ""))));
+  $("panel").innerHTML = rows.map(([l, a]) => `<div><div>${l}</div><div>0%</div><div>${ok ? fmt(a) : "$0.00"}</div></div>`).join("");
+}
+render({grossPay: 0, taxes: {amount: 0}, fica: {amount: 0}, preTax: {amount: 0}, postTax: {amount: 0}, takeHomePay: {amount: 0}});
+$("calc").onclick = async () => {
+  $("alert").textContent = "";
+  const wages = [{wage: num($("wage").value), hours: num($("hours").value)}];
+  if (!$("ot").hidden) wages.push({wage: num($("otw").value), hours: num($("oth").value)});
+  const ex = [...document.querySelectorAll("input[name=exemptions]:checked")].map(e => e.value);
+  const ded = $("dn").value ? [{name: $("dn").value, calculationMethod: $("dm").value, amount: num($("da").value)}] : [];
+  const body = {stateName: $("stateName").value, exemptions: ex, deductions: ded, fringe: [],
+                basics: {checkDate: $("checkDate").value, hourlyWages: wages, payFrequency: $("freq").value}};
+  const r = await fetch("/tools/paycheck-calculator/" + $("stateName").value, {method: "POST", body: JSON.stringify(body)});
+  if (!r.ok) {
+    if (BUG === "silent0") { render({grossPay: 0, taxes: {amount: 0}, fica: {amount: 0}, preTax: {amount: 0}, postTax: {amount: 0}, takeHomePay: {amount: 0}}); return; }
+    $("panel").innerHTML = ""; $("alert").textContent = "Unable to calculate right now. Please try again."; return;
+  }
+  render(JSON.parse(await r.text()));
+};
+validate();
+</script></body></html>

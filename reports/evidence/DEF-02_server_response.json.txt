@@ -1,0 +1,2 @@
+HTTP 200
+{"grossPay":"Inf","takeHomePay":{"amount":"NaN","percentage":NaN},"taxes":{"amount":"0.00","details":[],"percentage":0.0},"fica":{"amount":"Inf","details":[{"amount":"11,439.00","label":"Social Security","percentage":0.0},{"amount":"Inf","label":"Medicare Tax","percentage":NaN},{"amount":"Inf","label":"Additional Medicare","percentage":NaN}],"percentage":NaN},"preTax":{"amount":"0.00","details":[],"percentage":0.0},"postTax":{"amount":"0.00","details":[],"percentage":0.0}}

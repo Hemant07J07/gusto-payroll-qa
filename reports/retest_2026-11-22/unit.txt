@@ -1,0 +1,7 @@
+........................................................................ [ 73%]
+..........................                                               [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/api/test_payroll_api.py:30: set GUSTO_API_TOKEN and GUSTO_COMPANY_ID (demo env) to run API tests
+SKIPPED [1] tests/ui/test_run_payroll_app.py:22: no saved login at .auth/gusto.json; run scripts/save_login_state.py
+98 passed, 2 skipped, 38 deselected in 0.21s
+unit exit 0

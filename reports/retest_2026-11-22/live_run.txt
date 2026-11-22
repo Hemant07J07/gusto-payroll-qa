@@ -1,0 +1,90 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.5, pytest-9.2.0, pluggy-1.7.0 -- /Users/hemant/Downloads/gusto-qa/.venv/bin/python3.14
+metadata: {'Python': '3.14.5', 'Platform': 'macOS-26.6.2-arm64-arm-64bit-Mach-O', 'Packages': {'pytest': '9.2.0', 'pluggy': '1.7.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0', 'playwright': '0.10.0'}}
+rootdir: /Users/hemant/Downloads/gusto-qa
+configfile: pytest.ini
+plugins: metadata-3.1.1, html-4.2.0, playwright-0.10.0
+collecting ... collected 38 items
+
+tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium] PASSED [  2%]
+tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium] PASSED [  5%]
+tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01] PASSED [  7%]
+tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001] PASSED [ 10%]
+tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1] PASSED [ 13%]
+tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168] PASSED [ 15%]
+tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60] PASSED [ 18%]
+tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00] PASSED [ 21%]
+tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00] PASSED [ 23%]
+tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium] PASSED [ 26%]
+tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00] PASSED [ 28%]
+tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00] PASSED [ 31%]
+tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00] PASSED [ 34%]
+tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00] PASSED [ 36%]
+tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60] PASSED [ 39%]
+tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00] PASSED [ 42%]
+tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium] PASSED [ 44%]
+tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20] PASSED [ 47%]
+tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0] PASSED [ 50%]
+tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc] PASSED [ 52%]
+tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5] PASSED [ 55%]
+tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0] PASSED [ 57%]
+tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz] PASSED [ 60%]
+tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>] PASSED [ 63%]
+tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>] PASSED [ 65%]
+tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000] XFAIL [ 68%]
+tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000] XFAIL [ 71%]
+tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900] XFAIL [ 73%]
+tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium] XFAIL [ 76%]
+tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium] PASSED [ 78%]
+tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169] XFAIL [ 81%]
+tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000] XFAIL [ 84%]
+tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium] XFAIL [ 86%]
+tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB] XFAIL [ 89%]
+tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN] XFAIL [ 92%]
+tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium] XFAIL [ 94%]
+tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium] XFAIL [ 97%]
+tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium] XFAIL [100%]
+
+==================================== PASSES ====================================
+- Generated html report: file:///Users/hemant/Downloads/gusto-qa/reports/retest_2026-11-22/live_report.html -
+=========================== short test summary info ============================
+PASSED tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]
+PASSED tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]
+PASSED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]
+PASSED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]
+PASSED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]
+PASSED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]
+PASSED tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]
+PASSED tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]
+PASSED tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]
+PASSED tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]
+PASSED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]
+PASSED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]
+PASSED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]
+PASSED tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]
+PASSED tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]
+PASSED tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]
+PASSED tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]
+PASSED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]
+PASSED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]
+PASSED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]
+PASSED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]
+PASSED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]
+PASSED tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]
+PASSED tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]
+PASSED tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]
+PASSED tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]
+XFAIL tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000] - DEF-01: fixed-dollar deduction larger than gross is accepted; take-home goes negative
+XFAIL tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000] - DEF-01: fixed-dollar deduction larger than gross is accepted; take-home goes negative
+XFAIL tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900] - DEF-01: fixed-dollar deduction larger than gross is accepted; take-home goes negative
+XFAIL tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium] - DEF-02: wage 1e308 passes validation; server answers HTTP 200 with Inf/NaN (invalid JSON); user gets a generic 'something went wrong' instead of a validation message
+XFAIL tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169] - DEF-04: a WEEKLY pay period accepts more than 168 regular hours
+XFAIL tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000] - DEF-04: a WEEKLY pay period accepts more than 168 regular hours
+XFAIL tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium] - DEF-05: '20,5' is read as $205.00/h (comma dropped) without any warning
+XFAIL tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB] - DEF-06: date hint says MM/DD/YYYY but en-GB / en-IN browsers get the field in DD/MM/YYYY order
+XFAIL tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN] - DEF-06: date hint says MM/DD/YYYY but en-GB / en-IN browsers get the field in DD/MM/YYYY order
+XFAIL tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium] - DEF-07: hourly-wage helper text shows the overtime definition
+XFAIL tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium] - DEF-08: an overtime rate below the regular rate is accepted silently
+XFAIL tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium] - DEF-09: accepting the cookie banner reloads the page and wipes everything already typed
+================== 26 passed, 12 xfailed in 271.51s (0:04:31) ==================
+live exit 0

@@ -1,0 +1,5405 @@
+{
+ "live": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "tests/ui/test_public_calculator.py:180: AssertionError",
+    "outcome": "xfail",
+    "seconds": 1.66
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "tests/ui/test_public_calculator.py:255: AssertionError",
+    "outcome": "xfail",
+    "seconds": 7.08
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.9
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "tests/ui/test_public_calculator.py:224: AssertionError",
+    "outcome": "xfail",
+    "seconds": 3.68
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "tests/ui/test_public_calculator.py:224: AssertionError",
+    "outcome": "xfail",
+    "seconds": 3.48
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "tests/ui/test_public_calculator.py:212: AssertionError",
+    "outcome": "xfail",
+    "seconds": 2.14
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "tests/ui/test_public_calculator.py:170: AssertionError",
+    "outcome": "xfail",
+    "seconds": 1.61
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "tests/ui/test_public_calculator.py:170: AssertionError",
+    "outcome": "xfail",
+    "seconds": 1.63
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "tests/ui/test_public_calculator.py:170: AssertionError",
+    "outcome": "xfail",
+    "seconds": 1.64
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.46
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.45
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.08
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.07
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 3.14
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 3.14
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.36
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 3.17
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 3.13
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.78
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.48
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 18.02
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.31
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "tests/ui/test_public_calculator.py:237: AssertionError",
+    "outcome": "xfail",
+    "seconds": 2.24
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.21
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.12
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 3.19
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 3.19
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.53
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "tests/ui/test_public_calculator.py:230: AssertionError",
+    "outcome": "xfail",
+    "seconds": 0.02
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "tests/ui/test_public_calculator.py:204: AssertionError",
+    "outcome": "xfail",
+    "seconds": 2.55
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "tests/ui/test_public_calculator.py:204: AssertionError",
+    "outcome": "xfail",
+    "seconds": 2.53
+   }
+  },
+  "updated": "2026-11-22T10:48:08+00:00"
+ },
+ "mock": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.54
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.2
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.61
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.96
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.9
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.48
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.82
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.94
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.17
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.06
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.68
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.87
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T10:43:36+00:00"
+ },
+ "mock:big": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": ".venv/lib/python3.14/site-packages/playwright/_impl/utils/tasks.py:131: TimeoutError",
+    "outcome": "failed",
+    "seconds": 30.93
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.11
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.87
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.45
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.45
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.79
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.14
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.04
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.68
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.85
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.11
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:07:33+00:00"
+ },
+ "mock:comma": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.18
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "tests/ui/test_public_calculator.py:212: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.48
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.78
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.73
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.46
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.46
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.7
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.14
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.02
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.66
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.87
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.84
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.11
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:10:26+00:00"
+ },
+ "mock:cookiewipe": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "tests/ui/test_public_calculator.py:255: AssertionError",
+    "outcome": "failed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.11
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.61
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.9
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.8
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.16
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.04
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.67
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.87
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:14:10+00:00"
+ },
+ "mock:datehint": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.74
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "tests/ui/test_public_calculator.py:224: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "tests/ui/test_public_calculator.py:224: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.94
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.9
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.45
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.81
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.15
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.02
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.67
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.87
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.12
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.09
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:13:14+00:00"
+ },
+ "mock:display": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.2
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 1.57
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 1.57
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 1.57
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.74
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.79
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:54: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.18
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.03
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.67
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.84
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.11
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:15:05+00:00"
+ },
+ "mock:err500": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 0.78
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 0.78
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.98
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.96
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.98
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.48
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.98
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.17
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.04
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:44: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:30: KeyError",
+    "outcome": "failed",
+    "seconds": 1.18
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:16:50+00:00"
+ },
+ "mock:fica": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.2
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.73
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.57
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.8
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.73
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.89
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.89
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.48
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.74
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.15
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.05
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.67
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:48: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.85
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:48: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:100: AssertionError",
+    "outcome": "failed",
+    "seconds": 1.12
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:03:44+00:00"
+ },
+ "mock:helper": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.2
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.73
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.57
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.96
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.89
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.45
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.45
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.81
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.14
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.03
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.68
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.85
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.11
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "tests/ui/test_public_calculator.py:230: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:12:19+00:00"
+ },
+ "mock:hours168": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.15
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.11
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.61
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.79
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.96
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.89
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.81
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.94
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.15
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.03
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.67
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "tests/ui/test_public_calculator.py:204: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.5
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "tests/ui/test_public_calculator.py:204: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.49
+   }
+  },
+  "updated": "2026-11-22T11:09:30+00:00"
+ },
+ "mock:neg": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.57
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.78
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.9
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.87
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.9
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:145: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.09
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:145: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.05
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:145: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.1
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:145: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.05
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.78
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.94
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.16
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.02
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.67
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:02:49+00:00"
+ },
+ "mock:negnet": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.18
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.11
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": ".venv/lib/python3.14/site-packages/playwright/_impl/utils/tasks.py:131: TimeoutError",
+    "outcome": "failed",
+    "seconds": 30.9
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "tests/ui/test_public_calculator.py:170: AssertionError",
+    "outcome": "failed",
+    "seconds": 1.25
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "tests/ui/test_public_calculator.py:170: AssertionError",
+    "outcome": "failed",
+    "seconds": 1.25
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.96
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.81
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.94
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.16
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.06
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.68
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:06:08+00:00"
+ },
+ "mock:otdrop": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.53
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.76
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.11
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.78
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.81
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:47: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.93
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.18
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.04
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.65
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.11
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:04:40+00:00"
+ },
+ "mock:otlow": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.2
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.74
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.11
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.55
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.78
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.74
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.89
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.46
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.45
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.48
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.69
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "tests/ui/test_public_calculator.py:237: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.14
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.02
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.68
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.85
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.83
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.11
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:11:24+00:00"
+ },
+ "mock:silent0": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.19
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.13
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.57
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.59
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.58
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:196: AssertionError",
+    "outcome": "failed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.94
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.87
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.79
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.92
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.17
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 2.03
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.68
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.85
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:08:29+00:00"
+ },
+ "mock:xss": {
+  "tests": {
+   "tests/ui/test_public_calculator.py::test_absurd_wage_is_rejected_not_rendered_as_zero[chromium]": {
+    "case": "TC-PAY-085",
+    "defect": "DEF-02",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.52
+   },
+   "tests/ui/test_public_calculator.py::test_accepting_cookies_keeps_what_the_user_typed[chromium]": {
+    "case": "TC-PAY-092",
+    "defect": "DEF-09",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 5.2
+   },
+   "tests/ui/test_public_calculator.py::test_baseline_weekly_paycheck_matches_oracle[chromium]": {
+    "case": "TC-PAY-074",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.76
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-GB]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.12
+   },
+   "tests/ui/test_public_calculator.py::test_date_format_hint_matches_the_field_for_every_locale[chromium-en-IN]": {
+    "case": "TC-PAY-089",
+    "defect": "DEF-06",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_decimal_comma_is_not_silently_multiplied_by_ten[chromium]": {
+    "case": "TC-PAY-088",
+    "defect": "DEF-05",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-MedicalInsurance-900]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Retirement401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_larger_than_gross_never_gives_negative_take_home[chromium-Roth401k-1000]": {
+    "case": "TC-PAY-084",
+    "defect": "DEF-01",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-HsaIndividual-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-MedicalInsurance-True-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Retirement401k-False-100.00-0.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.6
+   },
+   "tests/ui/test_public_calculator.py::test_deduction_tax_treatment[chromium-Roth401k-False-0.00-100.00]": {
+    "case": "TC-PAY-079",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.58
+   },
+   "tests/ui/test_public_calculator.py::test_failed_calculation_is_reported_to_the_user[chromium]": {
+    "case": "TC-PAY-086",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.81
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Medicare Tax-49.60-0.00]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_fica_exemptions[chromium-Social Security-0.00-11.60]": {
+    "case": "TC-PAY-080",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.75
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-0.001]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-168]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-40.01]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.95
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-20-60]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.89
+   },
+   "tests/ui/test_public_calculator.py::test_gross_is_rate_times_regular_hours_and_fica_rounds_per_tax[chromium-7.25-1]": {
+    "case": "TC-PAY-076",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.91
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours--5]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.49
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-hours-xyz]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.5
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate--20]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-0]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.47
+   },
+   "tests/ui/test_public_calculator.py::test_invalid_input_is_flagged_and_blocks_calculate[chromium-rate-abc]": {
+    "case": "TC-PAY-082",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.51
+   },
+   "tests/ui/test_public_calculator.py::test_more_hours_always_increase_net_pay[chromium]": {
+    "case": "TC-PAY-081",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 4.81
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_field_pays_the_premium[chromium]": {
+    "case": "TC-PAY-075",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.96
+   },
+   "tests/ui/test_public_calculator.py::test_overtime_rate_below_regular_rate_is_flagged[chromium]": {
+    "case": "TC-PAY-091",
+    "defect": "DEF-08",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.19
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<img src=x onerror=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:156: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.18
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium-<svg onload=window.__pwned=1>]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "tests/ui/test_public_calculator.py:156: AssertionError",
+    "outcome": "failed",
+    "seconds": 2.03
+   },
+   "tests/ui/test_public_calculator.py::test_script_in_numeric_field_is_not_executed[chromium]": {
+    "case": "TC-PAY-083",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.68
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-10000-11439.00-5800.00-1800.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.88
+   },
+   "tests/ui/test_public_calculator.py::test_social_security_wage_base_and_additional_medicare[chromium-5000-11439.00-2900.00-0.00]": {
+    "case": "TC-PAY-077",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.86
+   },
+   "tests/ui/test_public_calculator.py::test_tax_year_follows_the_check_date[chromium]": {
+    "case": "TC-PAY-078",
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 1.13
+   },
+   "tests/ui/test_public_calculator.py::test_wage_helper_text_describes_the_wage[chromium]": {
+    "case": "TC-PAY-090",
+    "defect": "DEF-07",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.01
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-1000]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.1
+   },
+   "tests/ui/test_public_calculator.py::test_weekly_hours_cannot_exceed_hours_in_a_week[chromium-169]": {
+    "case": "TC-PAY-087",
+    "defect": "DEF-04",
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.08
+   }
+  },
+  "updated": "2026-11-22T11:16:01+00:00"
+ },
+ "unit": {
+  "tests": {
+   "tests/unit/test_deadlines.py::test_cutoff_boundary[when0-True]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_boundary[when1-False]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_boundary[when2-False]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_boundary[when3-True]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_boundary[when4-True]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_in_pdt_before_dst_ends": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_uses_pst_after_dst_ends[2026-11-02T23:00:00+00:00-True-23:00Z is only 15:00 PST]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_uses_pst_after_dst_ends[2026-11-02T23:59:59+00:00-True-15:59:59 PST (a PDT-based cutoff of 23:00Z would wrongly say late)]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_cutoff_uses_pst_after_dst_ends[2026-11-03T00:00:00+00:00-False-16:00 PST sharp]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_deadline_is_always_a_business_day": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_late_before_holiday_skips_holiday": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_late_on_friday_slips_to_monday": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_late_submission_slips_one_business_day": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_naive_datetime_is_rejected": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_next_business_day_skips_weekend_and_holiday": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check0-4-day-holidays0-expected0-Fri check date, 4 business days back = Mon]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check1-2-day-holidays1-expected1-2 business days back]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check2-next-day-holidays2-expected2-1 business day back]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check3-4-day-holidays3-expected3-Mon check date: weekend is skipped]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check4-4-day-holidays4-expected4-no holiday modelled]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check5-4-day-holidays5-expected5-Thanksgiving pushes deadline 1 business day earlier]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check6-2-day-holidays6-expected6-holiday inside 2-day window]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_payroll_deadline[check7-next-day-holidays7-expected7-holiday = the day before check date]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[False-now0-unprocessed]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[False-now1-unprocessed]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[True-now2-submitted]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[True-now3-submitted]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[True-now4-pending]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[True-now5-pending]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[True-now6-paid]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_status_machine[True-now7-paid]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_submitted_after_weekend_miss": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_deadlines.py::test_user_in_india_crossing_the_date_line": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_rejects_bad_shapes[days0]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_rejects_bad_shapes[days1]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_rejects_bad_shapes[days2]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days0-800.00-plain 5x8]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days1-0.00-no work]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days10-1320.00-7th day 9h: 8*30 + 1*40]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days2-160.00-exactly 8h in a day]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days3-160.30-8.01h: 0.01h at 1.5x]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days4-280.00-12h: 8*20 + 4*30]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days5-280.40-12.01h: 0.01h at 2x]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days6-360.00-8*20 + 4*30 + 2*40]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days7-880.00-4x10 = 40h: FLSA says no OT, CA daily OT does]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days8-1040.00-6x8=48h: 8 weekly OT hours]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_ca_style_daily_overtime[days9-1280.00-7 consecutive days: 800 + 240 weekly + 240 seventh-day]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_discretionary_bonus_is_excluded_from_regular_rate": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_rejects_invalid_input[-1-40-0]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_rejects_invalid_input[20--0.5-0]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_rejects_invalid_input[20-169-0]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_rejects_invalid_input[20-40--5]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[15.555-41-0-645.53-637.755 + 7.7775 = 645.5325 -> 645.53]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-0-0-0.00-zero hours]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-0-200-200.00-bonus only, no hours (avoid div-by-zero)]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-168-0-4640.00-max hours in a week: 3360 + 0.5*20*128 = 3360 + 1280]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-39.99-0-799.80-just under threshold]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-40-0-800.00-exactly 40h: no OT]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-40-200-1000.00-bonus but no OT -> no premium]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-40.01-0-800.30-just over threshold: 800.20 + 0.10 premium]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-41-0-830.00-1h OT: 800 + 1*30]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-50-200-1320.00-RR=(1000+200)/50=24 -> premium 0.5*24*10=120]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_flsa_weekly_gross[20-52-0-1160.00-Gusto doc example: premium = 0.5*20*12 = 120]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_overtime.py::test_same_hours_pay_differently_under_flsa_vs_ca": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[0-0-0.00-0.00-0.00-zero wages]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[0.02-184499.99-0.00-0.00-0.00-0.01 taxable * 6.2% = 0.0006 -> 0.00]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[1000-0-62.00-14.50-0.00-plain]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[1000-184500-0.00-14.50-0.00-already AT wage base]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[1000-190000-0.00-14.50-0.00-above wage base: Medicare still applies]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[1000-200000-0.00-14.50-9.00-exactly at threshold: whole paycheck is 'over'; SS capped]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[1000-250000-0.00-14.50-9.00-well above both]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[2000-184000-31.00-29.00-0.00-crosses SS wage base: only 500 taxable]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica[2000-199000-0.00-29.00-9.00-crosses 200k: 1000 over -> 0.9% = 9.00 (SS already capped at 184.5k)]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_fica_rejects_negative_wages": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[0-0-40-0-no election]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-0-30-1000-well under limit]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-24000-30-500-only 500 of room left]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-24500-30-0-limit reached]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-24500-49-0-49: no catch-up]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-24500-50-1000-50: catch-up 8,000 -> cap 32,500]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-32000-55-500-partial room under catch-up cap]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-32500-64-0-64: back to standard catch-up cap 32,500]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-35000-60-750-60-63 'super' catch-up: cap 35,750]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_cap[1000-35000-63-750-63 still super catch-up]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_k401_rejects_negative": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_medicare_rounding_is_half_up_not_bankers": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_net_pay_hand_computed": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_net_pay_invariant_randomised": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_net_pay_negative_is_rejected": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_supplemental_rejects_negative_bonus": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_supplemental_withholding[0-0-0.00-no bonus]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_supplemental_withholding[1000-0-220.00-flat 22%]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_supplemental_withholding[1000000-0-220000.00-exactly $1M is still 22%]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_supplemental_withholding[1000000.01-0-220000.00-0.01 over -> 0.0037 -> rounds to 0.00 extra]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_supplemental_withholding[2000-999000-590.00-1000 @22% + 1000 @37%]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_supplemental_withholding[500-1000000-185.00-all of it above $1M -> 37%]": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_taxable_wage_buckets": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   },
+   "tests/unit/test_taxes.py::test_taxable_wages_never_negative": {
+    "case": null,
+    "defect": null,
+    "detail": "",
+    "outcome": "passed",
+    "seconds": 0.0
+   }
+  },
+  "updated": "2026-11-22T10:42:39+00:00"
+ }
+}

@@ -1,0 +1,480 @@
+<title>Gusto Paycheck Calculator QA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a single reading column (max 1120px) - summary first, then one row per defect: notes left, evidence right. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #1b2230; --muted: #5a6475; --line: #dde1e8;
+  --accent: #2f4a8a; --accent-soft: #e6ecf8;
+  --sev2: #b42318; --sev2-bg: #fdecea; --sev3: #9a5b00; --sev3-bg: #fdf3e1; --sev4: #4b5565; --sev4-bg: #eef0f3;
+  --ok: #1e7a46; --ok-bg: #e5f4ec; --obs: #2f5f9a; --obs-bg: #e7eef8;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12161d; --surface: #1a2029; --fg: #e6e9ef; --muted: #9aa4b5; --line: #2c3442;
+  --accent: #9db4ec; --accent-soft: #232d42;
+  --sev2: #ff8a7d; --sev2-bg: #3a1f1d; --sev3: #f2b45a; --sev3-bg: #35291a; --sev4: #b5bdca; --sev4-bg: #262c36;
+  --ok: #6fd39b; --ok-bg: #18301f; --obs: #8fb6ee; --obs-bg: #1c2a3d; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a2029; --fg: #e6e9ef; --muted: #9aa4b5; --line: #2c3442;
+  --accent: #9db4ec; --accent-soft: #232d42;
+  --sev2: #ff8a7d; --sev2-bg: #3a1f1d; --sev3: #f2b45a; --sev3-bg: #35291a; --sev4: #b5bdca; --sev4-bg: #262c36;
+  --ok: #6fd39b; --ok-bg: #18301f; --obs: #8fb6ee; --obs-bg: #1c2a3d; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 15px/1.6 var(--sans); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 40px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { line-height: 1.25; text-wrap: balance; margin: 0; }
+h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.35rem; font-weight: 650; margin-top: 56px; margin-bottom: 14px; }
+h3 { font-size: 1.08rem; font-weight: 600; }
+p { margin: 0; max-width: 70ch; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+code, .mono { font-family: var(--mono); font-size: 0.88em; }
+code { background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.eyebrow { font: 600 0.74rem/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+header.top { display: grid; gap: 14px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.lede { color: var(--muted); font-size: 1.02rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 0.88rem; color: var(--muted); }
+.meta b { color: var(--fg); font-weight: 600; }
+
+.summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 28px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 6px; }
+.stat .n { font: 600 1.9rem/1 var(--mono); font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 0.88rem; color: var(--muted); }
+.stat .sevs { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.pill { display: inline-flex; align-items: center; gap: 4px; font: 600 0.74rem/1 var(--sans); letter-spacing: 0.03em;
+  padding: 5px 8px; border-radius: 999px; white-space: nowrap; }
+.s2 { color: var(--sev2); background: var(--sev2-bg); }
+.s3 { color: var(--sev3); background: var(--sev3-bg); }
+.s4 { color: var(--sev4); background: var(--sev4-bg); }
+.ok { color: var(--ok); background: var(--ok-bg); }
+.obs { color: var(--obs); background: var(--obs-bg); }
+.new { color: var(--accent); background: var(--accent-soft); }
+
+.tbl { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.76rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td a { font-weight: 500; }
+
+.defect { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 24px; padding: 28px 0;
+  border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+.defect:first-of-type { border-top: 0; }
+.defect .notes { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.defect .tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.defect .id { font: 600 0.9rem/1 var(--mono); color: var(--muted); }
+dl { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 6px 12px; margin: 0; font-size: 0.92rem; }
+dt { color: var(--muted); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; padding-top: 2px; }
+dd { margin: 0; min-width: 0; }
+.stub { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; color: var(--sev2); white-space: nowrap; }
+.evidence { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.evidence img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.evidence figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+figure { margin: 0; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+summary { cursor: pointer; padding: 9px 12px; font-size: 0.86rem; font-weight: 500; color: var(--accent); }
+details video { display: block; width: 100%; max-width: 100%; border-top: 1px solid var(--line); border-radius: 0 0 8px 8px; background: #000; }
+.files { font-size: 0.82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 10px; align-content: start; }
+ul { margin: 0; padding-left: 1.1em; display: grid; gap: 7px; }
+li { max-width: 72ch; }
+.note { font-size: 0.86rem; color: var(--muted); }
+.sources li { font-size: 0.88rem; }
+
+@media (max-width: 780px) {
+  .defect { grid-template-columns: minmax(0, 1fr); }
+  h1 { font-size: 1.6rem; }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  dd { margin-bottom: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">QA test report · Payroll module</span>
+    <h1>Gusto Paycheck Calculator QA</h1>
+    <p class="lede">Positive, negative, boundary and API testing of Gusto's public hourly paycheck calculator, the part of
+      Run payroll's calculation logic that can be tested without an account. Every defect below was reproduced again on
+      live gusto.com on 22 Nov 2026, with an annotated screenshot and a screen recording.</p>
+    <div class="meta">
+      <span><b>Target</b> gusto.com/tools/hourly-paycheck-calculator</span>
+      <span><b>Runs</b> 21 and 22 Nov 2026</span>
+      <span><b>Browser</b> Google Chrome (headed), Playwright + pytest</span>
+      <span><b>Test data</b> Alabama, weekly, $20/h × 40 h = $800 unless stated</span>
+    </div>
+  </header>
+
+  <section class="summary" aria-label="Summary">
+    <div class="stat">
+      <span class="n">13</span>
+      <span class="l">open defects, all reproduced twice</span>
+      <span class="sevs"><span class="pill s2">4 × Sev 2</span><span class="pill s3">8 × Sev 3</span><span class="pill s4">1 × Sev 4</span></span>
+    </div>
+    <div class="stat">
+      <span class="n">5</span>
+      <span class="l">new defects found in this round (DEF-10 to DEF-14), including missing server-side validation</span>
+    </div>
+    <div class="stat">
+      <span class="n">107</span>
+      <span class="l">live checks: 38 automated regression tests + 69 exploratory probes</span>
+    </div>
+    <div class="stat">
+      <span class="n">15/15</span>
+      <span class="l">seeded bug classes caught by the suite's self-test, so a green run can be trusted</span>
+    </div>
+  </section>
+
+  <h2>Test execution</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Layer</th><th>What it checks</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Reference model</td><td>Independent payroll oracle (FLSA overtime, FICA, 2026 wage base $184,500, 401(k) limit $24,500, cut-offs)</td><td class="num">98 passed</td></tr>
+        <tr><td>Framework self-test</td><td>Suite run against an offline copy of the page, clean and with 15 deliberately planted bugs</td><td class="num">38 passed · 15/15 caught</td></tr>
+        <tr><td>Regression suite, live</td><td>38 automated tests on gusto.com. Known defects are expected failures and turn red when Gusto fixes them</td><td class="num">26 passed · 12 expected fail</td></tr>
+        <tr><td>Exploratory sweep, live</td><td>Every input field (positive, negative, boundary, format), calculations, pay date, accessibility, mobile, server-side validation</td><td class="num">36 OK · 24 issue · 9 obs.</td></tr>
+        <tr><td>Defect re-verification</td><td>Each defect reproduced in visible Chrome with screenshot and video</td><td class="num">13 / 13 reproduced</td></tr>
+        <tr><td>Logged-in Run payroll, Gusto API</td><td>Need a Gusto demo company, saved login and API token</td><td class="num">not run</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:10px">Calculator test cases by design type: 4 positive, 13 negative, 12 boundary, 11 edge, 2 security
+    (42 cases in <code>data/test_cases.xlsx</code>; most cases cover several inputs, so the 69 probes include many more positive inputs).</p>
+
+  <h2>Defects</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>ID</th><th>Sev</th><th>Defect</th><th>Area</th></tr></thead>
+      <tbody>
+        <tr><td class="num"><a href="#def-01">DEF-01</a></td><td><span class="pill s2">Sev 2</span></td><td>Deduction larger than gross accepted; take-home goes negative</td><td>Calculation</td></tr>
+        <tr><td class="num"><a href="#def-05">DEF-05</a></td><td><span class="pill s2">Sev 2</span></td><td>Wage <code>20,5</code> silently becomes $205.00/h</td><td>Input parsing</td></tr>
+        <tr><td class="num"><a href="#def-10">DEF-10</a></td><td><span class="pill s2">Sev 2</span></td><td>Percentage deductions rounded to a whole percent (4.5 % → 5 %) <span class="pill new">New</span></td><td>Calculation</td></tr>
+        <tr><td class="num"><a href="#def-11">DEF-11</a></td><td><span class="pill s2">Sev 2</span></td><td>Extra federal / state withholding larger than gross accepted; take-home negative <span class="pill new">New</span></td><td>Calculation</td></tr>
+        <tr><td class="num"><a href="#def-13">DEF-13</a></td><td><span class="pill s3">Sev 3</span></td><td>Calculation endpoint does not validate input on the server <span class="pill new">New</span></td><td>API</td></tr>
+        <tr><td class="num"><a href="#def-12">DEF-12</a></td><td><span class="pill s3">Sev 3</span></td><td>Pay date in 1899 accepted; result is a silent $0.00 <span class="pill new">New</span></td><td>Validation</td></tr>
+        <tr><td class="num"><a href="#def-14">DEF-14</a></td><td><span class="pill s3">Sev 3</span></td><td>1.5 dependents accepted, then silently treated as 0 <span class="pill new">New</span></td><td>Validation</td></tr>
+        <tr><td class="num"><a href="#def-02">DEF-02</a></td><td><span class="pill s3">Sev 3</span></td><td>Wage <code>1e308</code> accepted; server returns <code>Inf</code> / <code>NaN</code> (invalid JSON)</td><td>Validation, API</td></tr>
+        <tr><td class="num"><a href="#def-04">DEF-04</a></td><td><span class="pill s3">Sev 3</span></td><td>Hours not limited to the length of the pay period</td><td>Validation</td></tr>
+        <tr><td class="num"><a href="#def-08">DEF-08</a></td><td><span class="pill s3">Sev 3</span></td><td>Overtime rate below the regular rate accepted</td><td>Validation</td></tr>
+        <tr><td class="num"><a href="#def-06">DEF-06</a></td><td><span class="pill s3">Sev 3</span></td><td>Date hint says MM/DD/YYYY; UK and India browsers get Day/Month/Year</td><td>Localisation</td></tr>
+        <tr><td class="num"><a href="#def-09">DEF-09</a></td><td><span class="pill s3">Sev 3</span></td><td>Accepting the cookie banner wipes everything typed</td><td>UI</td></tr>
+        <tr><td class="num"><a href="#def-07">DEF-07</a></td><td><span class="pill s4">Sev 4</span></td><td>Hourly-wage hint shows the overtime rule</td><td>UI text</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:10px">Severity: <b>Sev 2</b> a wrong money figure is shown with no warning ·
+    <b>Sev 3</b> wrong or misleading result, or a validation gap, that a careful user could avoid · <b>Sev 4</b> text or cosmetic.
+    DEF-03 from the first run was withdrawn: the page does show an error when a calculation request fails.</p>
+
+  <div style="margin-top:12px">
+
+  <article class="defect" id="def-01">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-01</span><span class="pill s2">Sev 2</span></div>
+      <h3>A deduction larger than gross pay is accepted, and take-home pay goes negative</h3>
+      <dl>
+        <dt>Steps</dt><dd>$800 gross. Benefits and Deductions → 401(k), Dollar amounts, $1,000 → Calculate.</dd>
+        <dt>Expected</dt><dd>Blocked or capped at the pay available. A percentage of 100 % or more is already blocked.</dd>
+        <dt>Actual</dt><dd>Accepted with no message. Take home pay <span class="stub">−$261.20 (−32.65 %)</span>. Roth $1,000 → −$347.96; Medical $900 → −$100.00.</dd>
+        <dt>Why</dt><dd>A paycheck cannot be negative. Payroll engines reduce or defer deductions to keep net pay at zero or above (<a href="https://docs.checkhq.com/docs/handling-negative-net-pay" target="_blank" rel="noopener">Check</a>, <a href="https://docs.oracle.com/en/applications/peoplesoft/human-capital-management/9.2.055/peoplesoft-payroll-for-north-america/usa-insufficient-net-pay-pay-calculation.html" target="_blank" rel="noopener">PeopleSoft</a>).</dd>
+        <dt>Fix</dt><dd>One net-pay floor in the calculation also fixes DEF-11.</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-01_negative_take_home.png" target="_blank"><img src="evidence/DEF-01_negative_take_home.png" alt="Result panel showing take home pay of minus 261.20 dollars after a 1,000 dollar 401(k) deduction on 800 dollars gross" loading="lazy"></a></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-01.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-05">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-05</span><span class="pill s2">Sev 2</span></div>
+      <h3>A wage typed with a decimal comma is multiplied by ten</h3>
+      <dl>
+        <dt>Steps</dt><dd>Type <code>20,5</code> as the hourly wage (decimal comma, used across Europe and Latin America).</dd>
+        <dt>Expected</dt><dd>Read as 20.50, or rejected with a message.</dd>
+        <dt>Actual</dt><dd>The field shows <span class="mono">205.00</span> with no warning. Gross for 40 h <span class="stub">$8,200.00</span> instead of $820.00.</dd>
+        <dt>Why</dt><dd>Comma decimals are a known input-localisation problem (<a href="https://www.w3.org/International/wiki/Locale-based_forms" target="_blank" rel="noopener">W3C locale-based forms</a>, <a href="https://react-spectrum.adobe.com/blog/how-we-internationalized-our-numberfield.html" target="_blank" rel="noopener">Adobe number field</a>).</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-05_decimal_comma.png" target="_blank"><img src="evidence/DEF-05_decimal_comma.png" alt="Wage field showing 205.00 after typing 20,5 and gross pay of 8,200 dollars" loading="lazy"></a></figure>
+      <details><summary>Screen recording (also shows DEF-07 and DEF-04)</summary><video controls preload="none" src="evidence/video/DEF-07_DEF-05_DEF-04.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-10">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-10</span><span class="pill s2">Sev 2</span><span class="pill new">New</span></div>
+      <h3>Percentage deductions are silently rounded to a whole percent</h3>
+      <dl>
+        <dt>Steps</dt><dd>401(k), "% Percent of gross pay", type <code>4.5</code> → Calculate.</dd>
+        <dt>Expected</dt><dd>Pre-tax deduction $36.00 (4.5 % of $800), or a message that decimals are not allowed.</dd>
+        <dt>Actual</dt><dd>The box changes to <span class="mono">5</span>. Pre-tax deducted <span class="stub">$40.00</span>, 11 % more than requested. Typing 99.99 is rounded to 100 and then rejected with "Must be less than 100", although the hint says "0 to 100".</dd>
+        <dt>Why</dt><dd>Fractional contribution rates are common, and the user is never told their number was changed (<a href="https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data" target="_blank" rel="noopener">WCAG 3.3.4, financial data</a>).</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-10_percentage_rounded.png" target="_blank"><img src="evidence/DEF-10_percentage_rounded.png" alt="Percentage box showing 5 after typing 4.5, and pre-tax deduction of 40 dollars" loading="lazy"></a></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-10.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-11">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-11</span><span class="pill s2">Sev 2</span><span class="pill new">New</span></div>
+      <h3>Extra federal or state withholding larger than gross is accepted, and take-home goes negative</h3>
+      <dl>
+        <dt>Steps</dt><dd>$800 gross. W-4 line 4(c) extra withholding $5,000 → Calculate. Then clear it and set Alabama additional withholding $2,000 → Calculate.</dd>
+        <dt>Expected</dt><dd>Rejected, or withholding capped at the pay available.</dd>
+        <dt>Actual</dt><dd>Both accepted with no message. Take home <span class="stub">−$4,315.28</span> (federal) and <span class="stub">−$1,347.96</span> (state).</dd>
+        <dt>Why</dt><dd>Tax can only be withheld from wages actually paid. Same root cause as DEF-01, through different fields.</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-11_federal_extra_withholding.png" target="_blank"><img src="evidence/DEF-11_federal_extra_withholding.png" alt="Federal extra withholding of 5,000 dollars giving negative take home pay" loading="lazy"></a>
+        <figcaption>Federal 4(c) $5,000. <a href="evidence/DEF-11_state_extra_withholding.png" target="_blank">State $2,000 screenshot</a></figcaption></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-11.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-13">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-13</span><span class="pill s3">Sev 3</span><span class="pill new">New</span></div>
+      <h3>The calculation endpoint does not validate input on the server</h3>
+      <dl>
+        <dt>Steps</dt><dd>Run a normal calculation, then send the page's own request again from inside the page with one field changed (same browser, cookies and bot clearance as the user).</dd>
+        <dt>Expected</dt><dd>A 4xx validation error for every invalid field. Never a computed paycheck, never a server error.</dd>
+        <dt>Actual</dt><dd>
+          Wage −20 → <span class="mono">HTTP 200</span>, gross <span class="stub">−$800</span>.
+          Wage <code>abc</code> or missing → 200, gross $0. 401(k) 150 % → 200, all zeros.
+          Hours −40, 100,000 hours, or frequency <code>Fortnightly</code> → <span class="mono">HTTP 500</span>.
+          Empty or malformed body → 400 and unknown state → 404 are correct.</dd>
+        <dt>Why</dt><dd>Browser checks can be bypassed; the server has to enforce them (<a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist" target="_blank" rel="noopener">OWASP secure coding</a>, <a href="https://owasp-top-10-proactive-controls-2018.readthedocs.io/en/latest/c5-validate-all-inputs.html" target="_blank" rel="noopener">OWASP C5</a>, <a href="https://cwe.mitre.org/data/definitions/602" target="_blank" rel="noopener">CWE-602</a>). A 500 for bad input also hides real outages in monitoring.</dd>
+        <dt>Scope</dt><dd>11 requests in total, functional checks only. No load, fuzzing or exploitation.</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-13_server_side_validation.png" target="_blank"><img src="evidence/DEF-13_server_side_validation.png" alt="Overlay listing replayed requests: negative wage returns HTTP 200 with gross minus 800, negative hours and unknown frequency return HTTP 500" loading="lazy"></a></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-13.webm"></video></details>
+      <div class="files">Raw requests and responses: <a href="evidence/DEF-13_server_validation.json.txt" target="_blank">DEF-13_server_validation.json.txt</a> · <a href="exploration/api_probes.json" target="_blank">api_probes.json</a> (all 11)</div>
+    </div>
+  </article>
+
+  <article class="defect" id="def-12">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-12</span><span class="pill s3">Sev 3</span><span class="pill new">New</span></div>
+      <h3>A pay date in 1899 is accepted, and the result is a silent $0.00</h3>
+      <dl>
+        <dt>Steps</dt><dd>Pay date 01/15/1899 → Calculate.</dd>
+        <dt>Expected</dt><dd>The date field rejects a year with no tax tables, with a message.</dd>
+        <dt>Actual</dt><dd>No message, Calculate enabled. The server answers <span class="mono">HTTP 200</span> with <code>"grossPay":"0.00"</code>, and every row shows <span class="stub">$0.00</span> with no error. A year of 2150 is calculated quietly with current tax tables.</dd>
+        <dt>Why</dt><dd>A $0.00 paycheck looks like an answer, not an error (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable" target="_blank" rel="noopener">WCAG 3.3.1 error identification</a>). Impossible dates such as 30 Feb and month 13 are rejected correctly.</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-12_pay_year_1899.png" target="_blank"><img src="evidence/DEF-12_pay_year_1899.png" alt="Pay date 01/15/1899 with every result row showing 0.00 dollars and no error" loading="lazy"></a></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-12.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-14">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-14</span><span class="pill s3">Sev 3</span><span class="pill new">New</span></div>
+      <h3>1.5 dependents is accepted, then silently treated as 0</h3>
+      <dl>
+        <dt>Steps</dt><dd>Alabama "How many dependents" = <code>1.5</code> → Calculate. Compare with 0 and 1.</dd>
+        <dt>Expected</dt><dd>Whole numbers only, with a validation message.</dd>
+        <dt>Actual</dt><dd>Not flagged, HTTP 200. Alabama tax: 0 dependents <span class="mono">$32.68</span>, 1 dependent <span class="mono">$31.72</span>, 1.5 dependents <span class="stub">$32.68</span>. The value is dropped, so the employee is over-withheld, and nothing tells the user.</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-14_fractional_dependents.png" target="_blank"><img src="evidence/DEF-14_fractional_dependents.png" alt="Dependents field showing 1.5, not flagged, with a calculated result" loading="lazy"></a></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-14.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-02">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-02</span><span class="pill s3">Sev 3</span></div>
+      <h3>Wage <code>1e308</code> passes validation, and the server returns invalid JSON</h3>
+      <dl>
+        <dt>Steps</dt><dd>Type <code>1e308</code> as the hourly wage → Calculate.</dd>
+        <dt>Expected</dt><dd>An upper bound on the field with a validation message.</dd>
+        <dt>Actual</dt><dd>The field shows a 309-digit number and is not flagged. The server answers <span class="mono">HTTP 200</span> with <code>"grossPay":"Inf"</code> and bare <code>NaN</code>. The page shows a generic "something went wrong on our end". The same parser reads <code>1e2</code> as $100 and <code>1e3</code> hours as 1,000.</dd>
+        <dt>Why</dt><dd>Infinity and NaN are not permitted in JSON (<a href="https://greenbytes.de/tech/specs/rfc8259.html" target="_blank" rel="noopener">RFC 8259</a>, <a href="https://tc39.es/ecma404/" target="_blank" rel="noopener">ECMA-404</a>).</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-02_huge_wage.png" target="_blank"><img src="evidence/DEF-02_huge_wage.png" alt="Wage field containing 1e308 expanded to a very long number, with a generic error" loading="lazy"></a></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-02.webm"></video></details>
+      <div class="files">Raw response: <a href="evidence/DEF-02_server_response.json.txt" target="_blank">DEF-02_server_response.json.txt</a></div>
+    </div>
+  </article>
+
+  <article class="defect" id="def-04">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-04</span><span class="pill s3">Sev 3</span></div>
+      <h3>Hours are not limited to the length of the pay period</h3>
+      <dl>
+        <dt>Steps</dt><dd>Weekly, 1,000 regular hours → Calculate. Repeat with other frequencies and with overtime.</dd>
+        <dt>Expected</dt><dd>Regular plus overtime hours cannot exceed the hours in the period (168 in a week).</dd>
+        <dt>Actual</dt><dd>Weekly 1,000 h → <span class="stub">$20,000.00</span> for one week. Biweekly 337 h, Semi-monthly 400 h and Monthly 745 h are all accepted. Weekly 40 h + 150 h overtime → $5,300.00. At 100,000 h the server answers HTTP 500.</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-04_1000_hours_weekly.png" target="_blank"><img src="evidence/DEF-04_1000_hours_weekly.png" alt="Weekly pay frequency with 1,000 hours giving 20,000 dollars gross" loading="lazy"></a>
+        <figcaption><a href="exploration/C-05.png" target="_blank">40 h + 150 h overtime screenshot</a> · <a href="exploration/H-04.png" target="_blank">Biweekly 337 h</a> · <a href="exploration/H-05.png" target="_blank">Monthly 745 h</a></figcaption></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-07_DEF-05_DEF-04.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-08">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-08</span><span class="pill s3">Sev 3</span></div>
+      <h3>An overtime rate below the regular rate is accepted</h3>
+      <dl>
+        <dt>Steps</dt><dd>$20 regular. Add Overtime: $10 × 12 h → Calculate.</dd>
+        <dt>Expected</dt><dd>A warning: overtime must be at least 1.5 × the regular rate ($30).</dd>
+        <dt>Actual</dt><dd>Accepted silently, gross $920.00. The field's own hint says "Overtime is a higher hourly wage".</dd>
+        <dt>Why</dt><dd>FLSA overtime is at least one and one-half times the regular rate (<a href="https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-B/subject-group-ECFR7be43dce58760d9/section-778.107" target="_blank" rel="noopener">29 CFR 778.107</a>).</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-08_overtime_below_regular.png" target="_blank"><img src="evidence/DEF-08_overtime_below_regular.png" alt="Overtime rate 10 dollars accepted beside a 20 dollar regular rate" loading="lazy"></a></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-08.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-06">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-06</span><span class="pill s3">Sev 3</span></div>
+      <h3>The date hint says MM/DD/YYYY, but UK and India browsers get Day/Month/Year</h3>
+      <dl>
+        <dt>Steps</dt><dd>Open the page with browser language en-GB or en-IN. Read the pay-date label and the field.</dd>
+        <dt>Expected</dt><dd>The hint matches the order of the field.</dd>
+        <dt>Actual</dt><dd>Label "(MM/DD/YYYY)", field <span class="mono">21 / 11 / 2026</span>. A user following the hint types 11/12/2026 for 12 Nov and gets 11 Dec, which can change the tax year in December.</dd>
+        <dt>Why</dt><dd>A stated format must match the field (<a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions" target="_blank" rel="noopener">WCAG 3.3.2</a>, <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G89" target="_blank" rel="noopener">technique G89</a>).</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-06_date_hint_en-GB.png" target="_blank"><img src="evidence/DEF-06_date_hint_en-GB.png" alt="Pay date label reading MM/DD/YYYY above a field ordered day, month, year" loading="lazy"></a>
+        <figcaption>en-GB. <a href="evidence/DEF-06_date_hint_en-IN.png" target="_blank">en-IN screenshot</a></figcaption></figure>
+      <details><summary>Screen recordings</summary><video controls preload="none" src="evidence/video/DEF-06_en-GB.webm"></video><video controls preload="none" src="evidence/video/DEF-06_en-IN.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-09">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-09</span><span class="pill s3">Sev 3</span></div>
+      <h3>Accepting the cookie banner wipes everything typed</h3>
+      <dl>
+        <dt>Steps</dt><dd>Fresh visit. Type wage $35, choose Weekly, then click "Accept all cookies".</dd>
+        <dt>Expected</dt><dd>The banner closes and the input stays.</dd>
+        <dt>Actual</dt><dd>The page reloads. Wage is empty and frequency is back to Bi-weekly.</dd>
+        <dt>Why</dt><dd>Users should not have to re-enter information in the same process (<a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry" target="_blank" rel="noopener">WCAG 2.2 3.3.7 Redundant Entry</a>).</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-09_step2_after_accepting_cookies.png" target="_blank"><img src="evidence/DEF-09_step2_after_accepting_cookies.png" alt="After accepting cookies the wage field is empty and frequency shows Bi-weekly" loading="lazy"></a>
+        <figcaption>After accepting. <a href="evidence/DEF-09_step1_before_accepting_cookies.png" target="_blank">Before screenshot</a></figcaption></figure>
+      <details><summary>Screen recording</summary><video controls preload="none" src="evidence/video/DEF-09.webm"></video></details>
+    </div>
+  </article>
+
+  <article class="defect" id="def-07">
+    <div class="notes">
+      <div class="tags"><span class="id">DEF-07</span><span class="pill s4">Sev 4</span></div>
+      <h3>The hourly-wage hint shows the overtime rule</h3>
+      <dl>
+        <dt>Steps</dt><dd>Read the hint under "What is your employee's hourly wage?".</dd>
+        <dt>Expected</dt><dd>Text that describes the wage.</dd>
+        <dt>Actual</dt><dd>"Work more than 8 hours a workday or more than 40 hours per workweek." Screen readers announce it with the wage field and with its error.</dd>
+        <dt>Why</dt><dd><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions" target="_blank" rel="noopener">WCAG 3.3.2 Labels or Instructions</a>.</dd>
+      </dl>
+    </div>
+    <div class="evidence">
+      <figure><a href="evidence/DEF-07_wage_hint.png" target="_blank"><img src="evidence/DEF-07_wage_hint.png" alt="Hint under the hourly wage field describing overtime" loading="lazy"></a></figure>
+    </div>
+  </article>
+  </div>
+
+  <h2>Also checked</h2>
+  <div class="cols">
+    <div class="panel">
+      <span class="pill ok" style="justify-self:start">Verified correct on live</span>
+      <ul>
+        <li>Gross = rate × hours to the cent (40.01 h, 0.001 h, 168 h)</li>
+        <li>Social Security and Medicare rounded separately; 2026 wage base <span class="mono">$184,500</span> caps Social Security at <span class="mono">$11,439.00</span> per check; 0.9 % Additional Medicare above $200k</li>
+        <li>A 2025 pay date uses the 2025 wage base</li>
+        <li>401(k), Section 125, HSA and Roth tax treatment; Social Security and Medicare exemptions</li>
+        <li>Negative, zero and non-numeric wage and hours rejected; negative deductions, negative W-4 values and a $0 overtime rate rejected</li>
+        <li>30 Feb and month 13 rejected; 29 Feb 2028 accepted</li>
+        <li>Script payloads in fields are not executed</li>
+        <li>Net + taxes + deductions = gross; the panel matches the server response; an error is shown when a request fails</li>
+        <li>axe-core WCAG 2.x A/AA scan of the form: no violations</li>
+        <li>390 px phone width: no sideways scrolling; no touch target under 24 px</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <span class="pill obs" style="justify-self:start">Observations for the product owner</span>
+      <ul>
+        <li>A wage below the $7.25 federal minimum ($0.01/h) is accepted with no warning</li>
+        <li>41 regular hours are paid at straight time with no overtime prompt</li>
+        <li>3-decimal wages are rounded to cents silently (20.999 → 21.00)</li>
+        <li>No upper bound on wage ($999,999,999/h) or dependents (1,000). W-4 Step 3 accepts $2,001, which no W-4 produces ($2,200 per child, $500 per other dependent)</li>
+        <li>After calculating, changing an input leaves the old result on screen with no "out of date" cue</li>
+        <li>The pre-tax deduction and fringe-benefit rows use identical labels with no group legend, so screen-reader users cannot tell them apart</li>
+        <li>Percentages are formatted inconsistently (81.5 % next to 81.51 %)</li>
+        <li>The endpoint rate-limits after about 40 calculations; headless browsers get a Cloudflare challenge</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Method and limits</h2>
+  <div class="cols">
+    <div class="panel">
+      <h3>How each finding was confirmed</h3>
+      <ul>
+        <li>Expected values come from an independent reference model in the repository, from the page's own hints, and from the cited rules. They are not copied from Gusto's output.</li>
+        <li>A defect is reported only after it reproduced in at least two separate runs and the server response was checked, not only the screen.</li>
+        <li>Five suspected "date" bugs and one percentage bug from a first draft turned out to be faults in my own test script. They were fixed and re-run before anything was reported.</li>
+        <li>Automated regression tests mark each known defect as an expected failure. When Gusto fixes it, the test turns red and tells us to update it.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Not covered yet</h3>
+      <ul>
+        <li>Logged-in Run payroll (cut-off times, PTO, bonus runs) and the Gusto API. These need a demo company, a saved login and an API token.</li>
+        <li>States other than Alabama.</li>
+        <li>Load, performance and security testing beyond input validation. The server-side checks were 11 paced requests.</li>
+      </ul>
+      <p class="note">Repository: <code>FINDINGS.md</code>, <code>data/test_cases.xlsx</code> (115 cases with results), <code>reports/evidence/</code>, <code>reports/exploration/</code>. Re-run with <code>python scripts/capture_evidence.py</code> and <code>python scripts/explore_more.py</code>.</p>
+    </div>
+  </div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+    <li><a href="https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-B/subject-group-ECFR7be43dce58760d9/section-778.107" target="_blank" rel="noopener">29 CFR 778.107, general overtime pay standard (eCFR)</a></li>
+    <li><a href="https://www.law.cornell.edu/cfr/text/29/531.35" target="_blank" rel="noopener">29 CFR 531.35, "free and clear" wage payment (Cornell LII)</a></li>
+    <li><a href="https://www.ssa.gov/oact/cola/cbb.html" target="_blank" rel="noopener">SSA, 2026 contribution and benefit base ($184,500)</a></li>
+    <li><a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500" target="_blank" rel="noopener">IRS, 2026 401(k) limit ($24,500)</a></li>
+    <li><a href="https://www.irs.gov/pub/irs-dft/fw4--dft.pdf" target="_blank" rel="noopener">IRS Form W-4 (2026 draft), Step 3 amounts</a></li>
+    <li><a href="https://docs.checkhq.com/docs/handling-negative-net-pay" target="_blank" rel="noopener">Check, handling negative net pay</a> · <a href="https://docs.oracle.com/en/applications/peoplesoft/human-capital-management/9.2.055/peoplesoft-payroll-for-north-america/usa-insufficient-net-pay-pay-calculation.html" target="_blank" rel="noopener">PeopleSoft, insufficient net pay</a></li>
+    <li><a href="https://greenbytes.de/tech/specs/rfc8259.html" target="_blank" rel="noopener">RFC 8259, The JSON Data Interchange Format</a> · <a href="https://tc39.es/ecma404/" target="_blank" rel="noopener">ECMA-404</a></li>
+    <li><a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist" target="_blank" rel="noopener">OWASP Secure Coding Practices checklist</a> · <a href="https://owasp-top-10-proactive-controls-2018.readthedocs.io/en/latest/c5-validate-all-inputs.html" target="_blank" rel="noopener">OWASP Proactive Controls C5</a> · <a href="https://cwe.mitre.org/data/definitions/602" target="_blank" rel="noopener">CWE-602</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions" target="_blank" rel="noopener">WCAG 3.3.2 Labels or Instructions</a> · <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G89" target="_blank" rel="noopener">G89 expected data format</a> · <a href="https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data" target="_blank" rel="noopener">WCAG 3.3.4</a> · <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry" target="_blank" rel="noopener">WCAG 3.3.7</a> · <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable" target="_blank" rel="noopener">MDN, WCAG Understandable (3.3.1)</a></li>
+    <li><a href="https://www.w3.org/International/wiki/Locale-based_forms" target="_blank" rel="noopener">W3C, locale-based forms</a> · <a href="https://react-spectrum.adobe.com/blog/how-we-internationalized-our-numberfield.html" target="_blank" rel="noopener">Adobe, internationalizing a number field</a></li>
+  </ul>
+  <p class="note" style="margin-top:24px">Screenshots carry a yellow note and red outlines added by the test script to show what was checked; they are not part of Gusto's page.</p>
+</div>

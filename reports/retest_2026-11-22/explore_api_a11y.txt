@@ -1,0 +1,27 @@
+[ISSUE] DT-06 calculate with pay date in 1899 | in='1899-01-15' | HTTP 200; body '{"grossPay":"0.00","takeHomePay":{"amount":"0.00","percentage":0},"taxes":{"amount":"0.00","details":[],"percentage":0},'; error shown ''
+[ISSUE] DT-07 calculate with pay date in 2150 | in='2150-01-15' | HTTP 200; body '{"grossPay":"800.00","takeHomePay":{"amount":"652.04","percentage":81.51},"taxes":{"amount":"86.76","details":[{"amount"'; error shown ''
+[OK   ] C-01 baseline $20 x 40 h weekly, 401(k) $50 | in='AL, weekly' | HTTP 200, gross $800.00, take home 76.28% $610.24
+[OBS  ] C-02 result panel after changing an input | in='wage 20 -> 30, no recalc' | panel gross still $800.00; stale cue: False
+[ISSUE] C-03 W-4 4(c) extra withholding $5,000 on $800 gross | in='fed extra 5000' | HTTP 200; take home -544.91% -$4,359.28
+[ISSUE] C-04 additional state withholding $2,000 on $800 gross | in='state extra 2000' | HTTP 200; take home -173.72% -$1,389.76
+[ISSUE] C-06 401(k) at 4.5 % of $800 gross | in='Percentage 4.5' | field shows '5'; HTTP 200; pre-tax 5% $40.00
+[ISSUE] C-07 1.5 state dependents (Alabama A-4 line 4 is a whole number) | in='dependents 1.5' | HTTP 200; take home 76.28% $610.24; error shown: ''
+[ISSUE] C-05 40 regular + 150 overtime hours in one week | in='weekly 40 + OT 150' | HTTP 200; gross $5,300.00
+payload paths: basics.hourlyWages.0.wage basics.hourlyWages.0.hours basics.payFrequency deductions.0.amount deductions.0.calculationMethod
+[OBS  ] API-01 unchanged replay (positive control) | in='unchanged replay (positive control)' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-02 negative wage -20 (UI rejects it) | in='negative wage -20 (UI rejects it)' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-03 negative hours -40 (UI rejects it) | in='negative hours -40 (UI rejects it)' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-04 wage 'abc' | in="wage 'abc'" | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-05 100,000 hours in a weekly period | in='100,000 hours in a weekly period' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-06 unknown pay frequency | in='unknown pay frequency' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-07 401(k) at 150 % (UI blocks >= 100 %) | in='401(k) at 150 % (UI blocks >= 100 %)' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-08 wage field missing | in='wage field missing' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-09 empty JSON object | in='{}' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-10 malformed JSON body | in='{"basics":' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OK   ] API-11 unknown state in the URL | in='unknown state in the URL' | HTTP 403; grossPay=None; takeHomePay=None; body: '<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+[OBS  ] CRASH-a11y section a11y crashed | in='-' | URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>
+[OK   ] M-01 horizontal overflow | in='iPhone-size viewport' | scrollWidth 390 vs viewport 390; elements past the edge: []
+[OK   ] M-02 touch targets smaller than 24x24 px (WCAG 2.5.8) | in='-' | 0 small: []
+
+ Counter({'OK': 41, 'ISSUE': 17, 'OBS': 11}) -> /Users/hemant/Downloads/gusto-qa/reports/exploration
+exit 0

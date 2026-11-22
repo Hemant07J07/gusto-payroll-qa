@@ -1,0 +1,138 @@
+[
+ [
+  "DEF-01",
+  true,
+  "gross 800.00, take-home -261.20",
+  [
+   "DEF-01_negative_take_home.png",
+   "video/DEF-01.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-02",
+  true,
+  "HTTP 200, Inf/NaN in body: True, strict JSON: False",
+  [
+   "DEF-02_huge_wage.png",
+   "DEF-02_server_response.json.txt",
+   "video/DEF-02.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-04",
+  true,
+  "1000 h weekly -> gross 20000.00",
+  [
+   "DEF-04_1000_hours_weekly.png",
+   "video/DEF-07_DEF-05_DEF-04.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-05",
+  true,
+  "'20,5' -> 205.00, gross 8200.00",
+  [
+   "DEF-05_decimal_comma.png",
+   "video/DEF-07_DEF-05_DEF-04.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-06",
+  true,
+  "hint MM/DD/YYYY with Day-first fields in ['en-GB', 'en-IN']",
+  [
+   "DEF-06_date_hint_en-GB.png",
+   "video/DEF-06_en-GB.webm",
+   "DEF-06_date_hint_en-IN.png",
+   "video/DEF-06_en-IN.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-07",
+  true,
+  "hint = 'Work more than 8 hours a workday or more than 40 hours per workweek.'",
+  [
+   "DEF-07_wage_hint.png",
+   "video/DEF-07_DEF-05_DEF-04.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-08",
+  true,
+  "OT $10 x 12 -> gross 920.00",
+  [
+   "DEF-08_overtime_below_regular.png",
+   "video/DEF-08.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-09",
+  true,
+  "before ('35.00', 'Weekly') -> after ('', 'Biweekly')",
+  [
+   "DEF-09_step1_before_accepting_cookies.png",
+   "DEF-09_step2_after_accepting_cookies.png",
+   "video/DEF-09.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-10",
+  true,
+  "4.5 % -> box shows '5', pre-tax 40.00",
+  [
+   "DEF-10_percentage_rounded.png",
+   "video/DEF-10.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-11",
+  true,
+  "federal extra $5,000 -> take-home -4315.28; state extra $2,000 -> take-home -1347.96",
+  [
+   "DEF-11_federal_extra_withholding.png",
+   "DEF-11_state_extra_withholding.png",
+   "video/DEF-11.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-12",
+  true,
+  "pay date 1899-01-15: HTTP 200, gross 0.00, error shown False",
+  [
+   "DEF-12_pay_year_1899.png",
+   "video/DEF-12.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-13",
+  true,
+  "negative wage -20 -> HTTP 200; wage 'abc' -> HTTP 200; negative hours -40 -> HTTP 500; unknown pay frequency 'Fortnightly' -> HTTP 500",
+  [
+   "DEF-13_server_side_validation.png",
+   "DEF-13_server_validation.json.txt",
+   "video/DEF-13.webm"
+  ],
+  "2026-11-22 16:42"
+ ],
+ [
+  "DEF-14",
+  true,
+  "state tax 0 deps 32.68, 1 dep 31.72, 1.5 deps 32.68 (treated as 0), no message",
+  [
+   "DEF-14_fractional_dependents.png",
+   "video/DEF-14.webm"
+  ],
+  "2026-11-22 16:44"
+ ]
+]
